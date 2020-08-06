@@ -1,0 +1,163 @@
+ body,
+            html {
+                height: 100%;
+                margin: 0%;
+                padding: 0%;
+                font-family: Arial, Helvetica, sans-serif;
+                box-sizing: border-box;
+                scroll-behavior: smooth; 
+            }         
+        
+            /*HEADER*/
+            
+            .zaglavljelogin {
+                background-image: url("../pictures/img4.jpg");
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100%;
+                padding: Spx;
+                text-align: center;
+            } 
+            a {
+                color: white;
+                text-decoration: none;
+                padding: 20px;
+                text-shadow: black 2px 2px 2px;
+            }
+            
+
+            /*LOG IN*/
+
+            #pokupi {
+                text-align: center;
+                position: fixed;
+                right: 40%;
+                top: 30%;
+                background-color: transparent;
+                z-index: 9;
+                padding: 10px;
+            }           
+            
+            fieldset {
+                border: 0px solid gray;
+                border-radius: 10px;
+                color: white;                
+                font-size: 16px;
+                text-transform: uppercase;
+                text-shadow: black 2px 2px 2px;
+                transform: scale(1.2);
+            }
+            input {
+                width: 100%;
+                height: 30px;
+                margin: 7px;
+                padding: 0px;
+                /*
+                 margin: 5px;
+                padding: 10px;*/
+            }
+            button {
+                padding: 5px;
+                width: 90px;
+                background-color: transparent;
+                font-weight: bold;
+                color: white;
+                text-transform: uppercase;
+            }
+            
+            
+            button:hover {
+                background-color: rgb(151, 170, 206);
+                color: white;
+                font-weight: bold;
+            }
+            
+
+            /*REGISTRATION*/            
+
+            #formMain {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            
+            #formLeft,
+            #formRight {
+                width: 200px;
+                margin: 20px;
+            }    
+            
+            #pokupiRezervacija {
+                text-align: center;
+                position: fixed;
+                left: 20%;
+                top: 10%;
+                z-index: 9;
+                background-color: transparent;
+                padding: 10px;
+            }
+          
+            
+            
+            /* NAVIGATION */
+            
+            .topnav {
+                overflow: hidden;
+                background-color: transparent;
+                transition: transform .2s;
+            }
+            
+            .topnav a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 30px;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            
+            .topnav a:hover {
+                text-shadow: black 2px 2px 2px;
+                transform: scale(1.5);
+            } 
+            
+            /*RESPONSIVE*/
+            
+            @media screen and (max-width: 1000px) {
+                #pokupiRezervacija {
+                    left: 10%;
+                }
+            }
+            
+            @media screen and (max-width: 750px) {
+                #pokupiRezervacija {
+                    left: 0%;
+                }
+            }
+            
+            @media screen and (max-width: 630px) {
+                #formMain {
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                #pokupiRezervacija {
+                    top: 0%;
+                    left: 20%;
+                }
+                #formLeft,
+                #formRight {
+                    margin: 0%;
+                }
+            }
+            /*FOOTER*/
+            
+            footer {
+                background-color: black;
+                color: white;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: center;
+                padding: 1% 3%;
+            }  
