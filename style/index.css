@@ -6,6 +6,7 @@
                 font-family: Arial, Helvetica, sans-serif;
                 box-sizing: border-box;
                 scroll-behavior: smooth; 
+                overflow: hidden;
             }         
         
             /*HEADER*/
@@ -119,7 +120,7 @@
                font-weight: bold;
                 transform: scale(1.2);
             } 
-            
+           
             /*RESPONSIVE*/
             
             @media screen and (max-width: 1000px) {
@@ -129,12 +130,23 @@
             }
             
             @media screen and (max-width: 750px) {
+                #sign-in-form{
+                    right: 0%;
+                    top: 10%;
+                    width: 100%;
+                    height: 700px;
+                    padding: 100px 10px;
+                }
+                input{
+                    width: 200px;
+                }
                 #pokupiRezervacija {
                     left: 0%;
                 }
             }
             
             @media screen and (max-width: 630px) {
+               
                 #formMain {
                     flex-direction: column;
                     justify-content: center;
@@ -147,6 +159,9 @@
                 #formRight {
                     margin: 0%;
                 }
+            }
+            @media screen and (max-width: 420px){
+               
             }
             /*FOOTER*/
             
