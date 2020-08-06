@@ -21,8 +21,8 @@
 
             <a id="home" class="active" href="home.html" style="display: none">Home</a>
            
-           <a id="registracija" href="#" onclick="prikaziRegistracionuFormu()">Sign Up</a>
-            <a id="logovanje" href="#" onclick="prikaziLoginFormu()" style="display:none">Sign In</a>
+           <a id="go-sign-up-form" href="#" onclick="showSignUpForm()">Sign Up</a>
+            <a id="go-sign-in-form" href="#" onclick="showSignInForm()" style="display:none">Sign In</a>
             
         </div>
 
@@ -34,7 +34,7 @@
 
     <!--LOG IN-->
     <div class="loginForma" id="mojaForma">
-        <form id="sign-in-form">
+        <form class="sign-form" id="sign-in-form">
             <fieldset>
                 <legend>Sign in</legend>
 
@@ -55,8 +55,8 @@
     <!--REGISTRACIJA POP-UP FORMA-->
 
     <div class="popupForma" id="mojaRegistracija">
-        <form id="pokupiRezervacija" style="display: none">
-            <fieldset>
+        <form class="sign-form" id="sign-up-form" style="display: none">
+            <fieldset class="sign-up-fieldset">
                 
                 <div id="formMain">
                     <div id="formLeft" >
@@ -102,11 +102,13 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" onclick="registracija()">Sign Up</button>
-                <button type="reset" onclick="obrisiR()">Clear</button>
-                <br>
-                <br>
-                <input type="button" onclick="sakrijRegistracionuFormu()" value="Close">
+                <div class="buttons">
+                    <button type="button" onclick="registracija()">Sign Up</button>
+                    <button type="reset" onclick="obrisiR()">Clear</button>
+                    <br>
+                    <br>
+                    <input type="button" onclick="hideSignUpForm()" value="Close">
+                </div>
             </fieldset>
         </form>
     </div>
@@ -117,8 +119,9 @@
     <footer id="podnozje">
         <p>Beograd, Milutina Milankovica 1, 011-111-1111</p>
     </footer>
+    <script src="js/index.js"></script>
     <script src="js/logovanje.js"></script>
-    <script src="js/popup.js"></script>
+    <!--<script src="js/popup.js"></script>-->
     <script src="js/validacijalogovanja.js"></script>
     <script src="js/validacijaregistracije.js"></script>
     <script src="js/registracija.js"></script>
