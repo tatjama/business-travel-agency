@@ -27,7 +27,7 @@
             }
             
 
-            /*LOG IN*/
+            /*SIGN IN*/
             .sign-form{
                 text-align: center;
                 position: fixed;
@@ -71,7 +71,7 @@
                 font-weight: bold;
             }           
 
-            /*REGISTRATION*/  
+            /*SIGN UP*/  
             
             #sign-up-form {
                 width: 550px;
@@ -153,39 +153,7 @@
                     width: 140px;
                     margin: 5px;
                 } 
-               /* #formMain {
-                    flex-direction: column;
-                    align-content: center;                    
-                }
-               
-                input{
-                    height: 22px;
-                }
-                
-                .buttons{
-                    margin: 0px;
-                    padding: 0px;
-                    width: 200px;
-                    
-                }
-                #sign-up-form {
-                   left: 0%;
-                   top: 10%;
-                   padding: 10% 30%;
-                }
-                .sign-up-fieldset{
-                    font-size: 10px;
-                }
-                #formLeft,
-                #formRight {
-                    margin: 0%;
-                }*/
-            }
-            @media screen and (max-width: 420px){
-                #sign-up-form {
-                    
-                 }
-            }
+            }    
             /*FOOTER*/
             
             footer {
