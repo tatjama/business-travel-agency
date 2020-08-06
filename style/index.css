@@ -1,5 +1,5 @@
  body,
-            html {
+ html {
                 height: 100%;
                 margin: 0%;
                 padding: 0%;
@@ -10,8 +10,8 @@
         
             /*HEADER*/
             
-            .zaglavljelogin {
-                background-image: url("../pictures/img4.jpg");
+            .container {
+                background-image: url("../images/suitcases.jpg");
                 background-position: bottom;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -23,20 +23,21 @@
                 color: white;
                 text-decoration: none;
                 padding: 20px;
-                text-shadow: black 2px 2px 2px;
             }
             
 
             /*LOG IN*/
 
-            #pokupi {
+            #sign-in-form {
                 text-align: center;
                 position: fixed;
+                width: 250px;
+                height: 260px;
                 right: 40%;
                 top: 30%;
-                background-color: transparent;
+                background-color: hsla(0, 0%, 0%, 30%);
                 z-index: 9;
-                padding: 10px;
+                padding: 30px 10px 0px 10px;
             }           
             
             fieldset {
@@ -45,17 +46,13 @@
                 color: white;                
                 font-size: 16px;
                 text-transform: uppercase;
-                text-shadow: black 2px 2px 2px;
                 transform: scale(1.2);
             }
             input {
-                width: 100%;
+                width: 90%;
                 height: 30px;
                 margin: 7px;
                 padding: 0px;
-                /*
-                 margin: 5px;
-                padding: 10px;*/
             }
             button {
                 padding: 5px;
@@ -69,7 +66,7 @@
             
             button:hover {
                 background-color: rgb(151, 170, 206);
-                color: white;
+                color: black;
                 font-weight: bold;
             }
             
@@ -119,8 +116,8 @@
             }
             
             .topnav a:hover {
-                text-shadow: black 2px 2px 2px;
-                transform: scale(1.5);
+               font-weight: bold;
+                transform: scale(1.2);
             } 
             
             /*RESPONSIVE*/
