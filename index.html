@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Log n</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/index.css" />
+    
+</head>
+
+<body>
+    <header class="zaglavljelogin">
+
+        <!--NAVIGATION-->
+        <div class="topnav" id="myTopnav">
+
+            <!--ctbtalg-->
+
+            <a id="home" class="active" href="home.html" style="display: none">Home</a>
+           
+            <a id="registracija" href="#" onclick="prikaziRegistracionuFormu()">Sign Up</a>
+            <a id="logovanje" href="#" onclick="prikaziLoginFormu()" style="display:none">Sign In</a>
+            
+        </div>
+
+        <!-- </div>-->
+        
+    </header>
+
+
+
+    <!--LOG IN-->
+    <div class="loginForma" id="mojaForma">
+        <form id="pokupi">
+            <fieldset>
+                <legend>Sign in</legend>
+
+                <br>E-mail:<br>
+                <span class="greska" id="greska1" title="Pogrešan unos. Unesite validan E-mail"></span>
+                <input type="email"  id="cena" onblur="validMail('cena', 0)" onfocus="unos(0)" required>
+                <br> Password:<br>
+                <span class="greska" id="greska2" title="Pogrešan unos. Unesite password"></span>
+                <input type="password" id="datum"  onblur="valid1('datum', 1)" onfocus="unos(1)" required><br>
+                <br>
+                <button type="button" onclick="logovanje()">Sign in </button>
+                <button type="reset" onclick="obrisi()">Clear</button>
+
+
+            </fieldset>
+        </form>
+    </div>
+    <!--REGISTRACIJA POP-UP FORMA-->
+
+    <div class="popupForma" id="mojaRegistracija">
+        <form id="pokupiRezervacija" style="display: none">
+            <fieldset>
+                
+                <div id="formMain">
+                    <div id="formLeft" >
+                        First name:
+                        <span class="greskaR" title="Pogrešan unos. Unesite ime"></span>
+                        <input type="text"  id="imeRegistracija" onblur="validR('imeRegistracija', 0)" onfocus="unosR(0)" required>
+                        <br> Second name:
+                        <span class="greskaR" title="Pogrešan unos. Unesite prezime"></span>
+                        <input type="text"  id="prezimeRegistracija" onblur="validR('prezimeRegistracija', 1)" onfocus="unosR(1)" required>
+                         E-mail:
+                        <span class="greskaR" title="Pogrešan unos. Unesite validan E-mail"></span>
+                        <input type="email"  id="emailRegistracija" onblur="validMailR('emailRegistracija', 2)" onfocus="unosR(2)" required>
+                        <br> Password:
+                        <span class="greskaR" title="Pogrešan unos. Unesite password"></span>
+                        <input type="password"  id="lozinkaRegistracija" name="bday" onblur="valid1R('lozinkaRegistracija', 3)" onfocus="unosR(3)" required>
+                        <!--Uraditi validaciju-->
+                        <br> Repeat Password:
+                        <span class="greskaR" title="Pogrešan unos. Unesite password"></span>
+                        <input type="password"  id="lozinkaRegistracija" name="bday" onblur="valid1R('lozinkaRegistracija', 3)" onfocus="unosR(3)" required>
+
+                    </div>
+                    <div id="formRight" >
+                        <!--Uraditi validaciju-->
+                        Adress 1:
+                        <span class="greskaR" title="Pogrešan unos. Unesite adresu"></span>
+                        <input type="text" placeholder="(required)" id="adresa1" onblur="validR('adresa1', 1)" onfocus="unosR(1)" required>
+                        <br> Adress 2:
+                        <span class="greskaR" title="Pogrešan unos. Unesite prezime"></span>
+                        <input type="text" id="adresa2" onblur="validR('adresa2', 1)" onfocus="unosR(1)">
+                        <br> Phone number 1:
+                        <span class="greskaR" title="Pogrešan unos. Unesite prezime"></span>
+                        <input type="text" placeholder="(required)" id="phone1" onblur="validR('phone1', 1)" onfocus="unosR(1)" required>
+                        <br> Phone number 2:
+                        <span class="greskaR" title="Pogrešan unos. Unesite prezime"></span>
+                        <input type="text"  id="phone2" onblur="validR('phone2', 1)" onfocus="unosR(1)">
+
+                        <br>
+
+
+                        <div style="display:none"> Status:
+
+                            <input type="number" placeholder="administrator" id="kolicinaRegistracija" readonly value="1"><br>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" onclick="registracija()">Sign Up</button>
+                <button type="reset" onclick="obrisiR()">Clear</button>
+                <br>
+                <br>
+                <input type="button" onclick="sakrijRegistracionuFormu()" value="Close">
+            </fieldset>
+        </form>
+    </div>
+
+
+
+
+    <footer id="podnozje">
+        <p>Beograd, Milutina Milankovica 1, 011-111-1111</p>
+    </footer>
+    <script src="js/logovanje.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/validacijalogovanja.js"></script>
+    <script src="js/validacijaregistracije.js"></script>
+    <script src="js/registracija.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>
