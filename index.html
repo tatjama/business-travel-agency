@@ -16,112 +16,89 @@
 
         <!--NAVIGATION-->
         <div class="topnav" id="myTopnav">
-
-            <!--ctbtalg-->
-
-            <a id="home" class="active" href="home.html" style="display: none">Home</a>
-           
+            <a id="home" class="active" href="home.html" style="display: none">Home</a>           
            <a id="go-sign-up-form" href="#" onclick="showSignUpForm()">Sign Up</a>
-            <a id="go-sign-in-form" href="#" onclick="showSignInForm()" style="display:none">Sign In</a>
-            
+            <a id="go-sign-in-form" href="#" onclick="showSignInForm()" style="display:none">Sign In</a>            
         </div>
-
-        <!-- </div>-->
-        
     </header>
 
-
-
-    <!--LOG IN-->
+    <!--SIGN IN-->
     <div class="loginForma" id="mojaForma">
         <form class="sign-form" id="sign-in-form">
             <fieldset>
                 <legend>Sign in</legend>
-
                 <br>E-mail:<br>
-                <span class="greska" id="greska1" title="Pogrešan unos. Unesite validan E-mail"></span>
-                <input type="email"  id="cena" onblur="validMail('cena', 0)" onfocus="unos(0)" required>
+                <span class="error-sign-in" id="greska1" title="Error. E-mail format something@something.com"></span>
+                <input type="email"  id="sign-in-e-mail" onblur="validEMail('sign-in-e-mail', 0, 'error-sign-in')" onfocus="clearOnFocus('error-sign-in', 0)" required>
                 <br> Password:<br>
-                <span class="greska" id="greska2" title="Pogrešan unos. Unesite password"></span>
-                <input type="password" id="datum"  onblur="valid1('datum', 1)" onfocus="unos(1)" required><br>
+                <span class="error-sign-in" id="greska2" title="Error. Password format only letters and numbers"></span>
+                <input type="password" id="sign-in-password"  onblur="validPassword('sign-in-password', 1, 'error-sign-in')" onfocus="clearOnFocus('error-sign-in', 1)" required><br>
                 <br>
                 <button type="button" onclick="logovanje()">Sign in </button>
-                <button type="reset" onclick="obrisi()">Clear</button>
-
-
+                <button type="reset" >Clear</button>
             </fieldset>
         </form>
     </div>
-    <!--REGISTRACIJA POP-UP FORMA-->
+
+    <!--SIGN UP POP-UP FORM-->
 
     <div class="popupForma" id="mojaRegistracija">
         <form class="sign-form" id="sign-up-form" style="display: none">
-            <fieldset class="sign-up-fieldset">
-                
+            <fieldset class="sign-up-fieldset">                
                 <div id="formMain">
                     <div id="formLeft" >
                         First name:
-                        <span class="greskaR" title="Pogrešan unos. Unesite ime"></span>
-                        <input type="text"  id="imeRegistracija" onblur="validR('imeRegistracija', 0)" onfocus="unosR(0)" required>
+                        <span class="error-sign-up" title="Error. Valid name contain only letters"></span>
+                        <input type="text"  id="sign-up-name" onblur="validName('sign-up-name', 0, 'error-sign-up')" onfocus="clearOnFocus('error-sign-up', 0)" required>
                         <br> Second name:
-                        <span class="greskaR" title="Pogrešan unos. Unesite prezime"></span>
-                        <input type="text"  id="prezimeRegistracija" onblur="validR('prezimeRegistracija', 1)" onfocus="unosR(1)" required>
+                        <span class="error-sign-up" title="Error. Valid surname contain only letters"></span>
+                        <input type="text"  id="sign-up-surname" onblur="validName('sign-up-surname', 1, 'error-sign-up')" onfocus="clearOnFocus('error-sign-up', 1)" required>
                         <br> E-mail:
-                        <span class="greskaR" title="Pogrešan unos. Unesite validan E-mail"></span>
-                        <input type="email"  id="emailRegistracija" onblur="validMailR('emailRegistracija', 2)" onfocus="unosR(2)" required>
+                        <span class="error-sign-up" title="Error. E-mail format something@something.com"></span>
+                        <input type="email"  id="sign-up-e-mail" onblur="validEMail('sign-up-e-mail', 2, 'error-sign-up')" onfocus="clearOnFocus('error-sign-up', 2)" required>
                         <br> Password:
-                        <span class="greskaR" title="Pogrešan unos. Unesite password"></span>
-                        <input type="password"  id="lozinkaRegistracija" name="bday" onblur="valid1R('lozinkaRegistracija', 3)" onfocus="unosR(3)" required>
+                        <span class="error-sign-up" title="Error. Password format only letters and numbers"></span>
+                        <input type="password"  id="sign-up-password" name="bday" onblur="validPassword('sign-up-password', 3, 'error-sign-up')" onfocus="clearOnFocus('error-sign-up', 3)" required>
                         <!--Uraditi validaciju-->
                         <br> Repeat Password:
-                        <span class="greskaR" title="Pogrešan unos. Unesite password"></span>
-                        <input type="password"  id="lozinkaRegistracija" name="bday" onblur="valid1R('lozinkaRegistracija', 3)" onfocus="unosR(3)" required>
+                        <span class="error-sign-up" title="Error. Password format only letters and numbers"></span>
+                        <input type="password"  id="sign-up-password-r" name="bday" onblur="validPassword('sign-up-password-r', 4, 'error-sign-up')" onfocus="clearOnFocus('error-sign-up', 4)" required>
 
                     </div>
                     <div id="formRight" >
                         <!--Uraditi validaciju-->
                         Adress 1:
-                        <span class="greskaR" title="Pogrešan unos. Unesite adresu"></span>
-                        <input type="text" placeholder="(required)" id="adresa1" onblur="validR('adresa1', 1)" onfocus="unosR(1)" required>
+                        <span class="error-sign-up" title="Error. Address contain only letters and numbers"></span>
+                        <input type="text" placeholder="(required)" id="address1" onblur="validPassword('address1', 5, 'error-sign-up')" onfocus="clearOnFocus('error-sign-up', 5)" required>
                         <br> Adress 2:
-                        <span class="greskaR" title="Pogrešan unos. Unesite prezime"></span>
-                        <input type="text" id="adresa2" onblur="validR('adresa2', 1)" onfocus="unosR(1)">
+                        <span class="error-sign-up" title="Error. Address contain only letters and numbers"></span>
+                        <input type="text" id="address2" onblur="validPassword('address2', 6, 'error-sign-up')" onfocus="clearOnFocus('error-sign-up', 6)">
                         <br> Phone number 1:
-                        <span class="greskaR" title="Pogrešan unos. Unesite prezime"></span>
-                        <input type="text" placeholder="(required)" id="phone1" onblur="validR('phone1', 1)" onfocus="unosR(1)" required>
+                        <span class="error-sign-up" title="Error. Phone contain only numbers"></span>
+                        <input type="number" minlength="11" maxlength="15" placeholder="(required)" id="phone1" onblur="validPhone('phone1', 7, 'error-sign-up')" onfocus="clearOnFocus('error-sign-up', 7)" required>
                         <br> Phone number 2:
-                        <span class="greskaR" title="Pogrešan unos. Unesite prezime"></span>
-                        <input type="text"  id="phone2" onblur="validR('phone2', 1)" onfocus="unosR(1)">
-
+                        <span class="error-sign-up" title="Error. Phone contain only numbers"></span>
+                        <input type="number" minlength="11" maxlength="15"  id="phone2" onblur="validPhone('phone2', 8, 'error-sign-up')" onfocus="clearOnFocus('error-sign-up', 8)">
                         <br>
-
-
                         <div style="display:none"> Status:
-
                             <input type="number" placeholder="administrator" id="kolicinaRegistracija" readonly value="1"><br>
                         </div>
                     </div>
                 </div>
                 <div class="buttons">
                     <button type="button" onclick="registracija()">Sign Up</button>
-                    <button type="reset" onclick="obrisiR()">Clear</button>
-                    <br>
-                    <br>
+                    <button type="reset" >Clear</button>
+                    <br><br>
                     <input type="button" onclick="hideSignUpForm()" value="Close">
                 </div>
             </fieldset>
         </form>
     </div>
-
-
-
-
     <footer id="podnozje">
         <p>Beograd, Milutina Milankovica 1, 011-111-1111</p>
     </footer>
     <script src="js/index.js"></script>
     <script src="js/logovanje.js"></script>
-    <!--<script src="js/popup.js"></script>-->
     <script src="js/validacijalogovanja.js"></script>
     <script src="js/validacijaregistracije.js"></script>
     <script src="js/registracija.js"></script>
