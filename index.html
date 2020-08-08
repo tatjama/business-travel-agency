@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Log n</title>
+    <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="style/index.css" />
@@ -16,25 +16,25 @@
 
         <!--NAVIGATION-->
         <div class="topnav" id="myTopnav">
-            <a id="home" class="active" href="home.html" style="display: none">Home</a>           
+            <a id="start" class="active" href="start.html" style="display: none">Start</a>           
            <a id="go-sign-up-form" href="#" onclick="showSignUpForm()">Sign Up</a>
             <a id="go-sign-in-form" href="#" onclick="showSignInForm()" style="display:none">Sign In</a>            
         </div>
     </header>
 
     <!--SIGN IN-->
-    <div class="loginForma" id="mojaForma">
+    <div>
         <form class="sign-form" id="sign-in-form">
             <fieldset>
                 <legend>Sign in</legend>
                 <br>E-mail:<br>
-                <span class="error-sign-in" id="greska1" title="Error. E-mail format something@something.com"></span>
+                <span class="error-sign-in"  title="Error. E-mail format something@something.com"></span>
                 <input type="email"  id="sign-in-e-mail" onblur="validEMail('sign-in-e-mail', 0, 'error-sign-in')" onfocus="clearOnFocus('error-sign-in', 0)" required>
                 <br> Password:<br>
-                <span class="error-sign-in" id="greska2" title="Error. Password format only letters and numbers"></span>
+                <span class="error-sign-in"  title="Error. Password format only letters and numbers"></span>
                 <input type="password" id="sign-in-password"  onblur="validPassword('sign-in-password', 1, 'error-sign-in')" onfocus="clearOnFocus('error-sign-in', 1)" required><br>
                 <br>
-                <button type="button" onclick="logovanje()">Sign in </button>
+                <button type="button" onclick="signIn()">Sign in </button>
                 <button type="reset" >Clear</button>
             </fieldset>
         </form>
@@ -42,7 +42,7 @@
 
     <!--SIGN UP POP-UP FORM-->
 
-    <div class="popupForma" id="mojaRegistracija">
+    <div >
         <form class="sign-form" id="sign-up-form" style="display: none">
             <fieldset class="sign-up-fieldset">                
                 <div id="formMain">
@@ -59,12 +59,11 @@
                         <br> Password:
                         <span class="error-sign-up" title="Error. Password format only letters and numbers"></span>
                         <input type="password"  id="sign-up-password" name="bday" onblur="validPassword('sign-up-password', 3, 'error-sign-up')" onfocus="clearOnFocus('error-sign-up', 3)" required>
-                        <!--Uraditi validaciju password again-->
                         <br> Repeat Password:
                         <span class="error-sign-up" title="Error. Password format only letters and numbers"></span>
                         <input type="password"  id="sign-up-password-r" name="bday" onblur="validPassword('sign-up-password-r', 4, 'error-sign-up')" onfocus="clearOnFocus('error-sign-up', 4)" required>
-
                     </div>
+
                     <div id="formRight" >
                         Adress 1:
                         <span class="error-sign-up" title="Error. Address contain only letters and numbers"></span>
@@ -96,10 +95,6 @@
     <footer id="podnozje">
         <p>Beograd, Milutina Milankovica 1, 011-111-1111</p>
     </footer>
-    <script src="js/index.js"></script>
-    <script src="js/logovanje.js"></script>
-    <script>
-    </script>
+    <script src="js/index.js"></script>    
 </body>
-
 </html>

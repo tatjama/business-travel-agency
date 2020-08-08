@@ -61,6 +61,10 @@ function clearSignUp() {
     document.getElementById('sign-up-password-r').value = '';
     document.getElementById('status').value = '1';
 }
+function clearSignIn(){
+    document.getElementById('sign-in-e-mail').value = '';
+    document.getElementById('sign-in-password').value = '';
+}
 
 //SIGN UP         
 //funkcija prikuplja podatke iz forme u HTML-u i smesta u objekat sa nazivom noviKorisnik.
@@ -135,3 +139,48 @@ function signUp() {
     }
 
 } //end SIGN UP function
+
+//SIGN IN
+
+function signIn() {
+    if (document.getElementsByClassName('error-sign-in')[0].innerHTML == '*') {
+        alert('Invalid E-mail format. E-mail format something@something.xyz');
+    } else if (document.getElementsByClassName('error-sign-in')[1].innerHTML == '*') {
+        alert('Invalid password character. Password contain only letters and numbers');
+    } else {
+        signInForm.style.display = 'none';
+
+        let email = document.getElementById('sign-in-e-mail').value;
+        let password = document.getElementById('sign-in-password').value;
+        let activeUser = new User(undefined, undefined, email, password);
+        //console.log(activeUser);
+        //vadi niz iz local S i parsira u JavaScript, smesta u promenljivu nizKorisnika
+        let arrayUsers = JSON.parse(localStorage.getItem('localStorageUsers')) || [];
+        console.log(arrayUsers);
+        let user = {status: 9, email: "gost"};
+
+        for (let i = 0; i < arrayUsers.length; i++) {
+            if (activeUser.email === arrayUsers[i].email && activeUser.password === arrayUsers[i].password) {
+                if (arrayUsers[i].status == 0) {
+                    alert("Welcome  administrator");
+                } else {
+                    alert("Welcome user");
+                }
+                user = arrayUsers[i];
+               // console.log(user);
+            }
+        }
+
+        if (user.status == 9) {
+            alert("You are not registered! Please Sign up...");
+            goSignUpForm.style.display = "block";
+           
+        } else {            
+            document.getElementById('home').style.display = "block";
+            goSignUpForm.style.display = "none";  
+        }
+        sessionStorage.setItem('user', JSON.stringify(user));
+       clearSignIn();
+    }
+
+} //End signIn function
