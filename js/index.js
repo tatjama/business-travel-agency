@@ -94,7 +94,19 @@ class User{
             }        
         })
     }
+}
 
+class DefaultUsers{
+    async getDefaultUsers(){
+        try {
+            let result = await fetch('users.json');
+            let data = await result.json();
+            let defaultUsers = data.users;
+            return defaultUsers;
+        } catch (error) {
+            console.log(error)
+        }
+    }   
 }
 
 function signUp() {
@@ -150,37 +162,36 @@ function signIn() {
     } else {
         signInForm.style.display = 'none';
 
+        let newArrayUsers = [];
         let email = document.getElementById('sign-in-e-mail').value;
         let password = document.getElementById('sign-in-password').value;
         let activeUser = new User(undefined, undefined, email, password);
-        //console.log(activeUser);
-        //vadi niz iz local S i parsira u JavaScript, smesta u promenljivu nizKorisnika
-        let arrayUsers = JSON.parse(localStorage.getItem('localStorageUsers')) || [];
-        console.log(arrayUsers);
-        let user = {status: 9, email: "gost"};
+        let user = {status: 9, email: "guest"};
+        let defaultUsers = new DefaultUsers();
 
-        for (let i = 0; i < arrayUsers.length; i++) {
-            if (activeUser.email === arrayUsers[i].email && activeUser.password === arrayUsers[i].password) {
-                if (arrayUsers[i].status == 0) {
-                    alert("Welcome  administrator");
-                } else {
-                    alert("Welcome user");
+        defaultUsers.getDefaultUsers().then((defaultUsers)=>{
+            let arrayUsers = JSON.parse(localStorage.getItem('localStorageUsers')) || [];
+            (arrayUsers.length === 0)?  newArrayUsers = defaultUsers: newArrayUsers = arrayUsers.concat(defaultUsers);
+            return newArrayUsers;
+        }).then(()=>{
+            //console.log(newArrayUsers);
+            for (let i = 0; i < newArrayUsers.length; i++) {
+                if (activeUser.email === newArrayUsers[i].email && activeUser.password === newArrayUsers[i].password) {
+                    (newArrayUsers[i].status == 0)? alert("Welcome  administrator"): alert("Welcome user");                    
+                    user = newArrayUsers[i];
                 }
-                user = arrayUsers[i];
-               // console.log(user);
+            }    
+            if (user.status == 9) {
+                alert("You are not registered! Please Sign up...");
+                goSignUpForm.style.display = "block";               
+            } else {            
+                document.getElementById('start').style.display = "block";
+                goSignUpForm.style.display = "none";  
             }
-        }
-
-        if (user.status == 9) {
-            alert("You are not registered! Please Sign up...");
-            goSignUpForm.style.display = "block";
-           
-        } else {            
-            document.getElementById('home').style.display = "block";
-            goSignUpForm.style.display = "none";  
-        }
-        sessionStorage.setItem('user', JSON.stringify(user));
-       clearSignIn();
+            sessionStorage.setItem('user', JSON.stringify(user));
+           clearSignIn();
+        })
+        
     }
 
 } //End signIn function

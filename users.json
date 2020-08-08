@@ -1,0 +1,18 @@
+{
+  "users":[
+        {
+            "name": "ADMIN",
+            "surname": "ADMIN",
+            "email": "admin@admin.com",
+            "password": "admin",
+            "status": "0"
+        },
+        {
+            "name": "USER",
+            "surname": "USER",
+            "email": "user@user.com",
+            "password": "user",
+            "status": "1"
+        }
+    ]
+}
