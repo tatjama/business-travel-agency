@@ -107,6 +107,8 @@ class DefaultUsers{
             console.log(error)
         }
     }   
+
+
 }
 
 function signUp() {
@@ -136,18 +138,25 @@ function signUp() {
     } else { 
 
         const user = new User(name, surname, email, password, address1, address2, phone1, phone2);
-        User.checkDoesUserExist(user, arrayUsers);        
+        
+        const defaultUsers = new DefaultUsers();
+        defaultUsers.getDefaultUsers().then((defaultUsers)=>{
+            console.log(defaultUsers);
+            User.checkDoesUserExist(user, defaultUsers);
+            User.checkDoesUserExist(user, arrayUsers); 
+            if (user.email !== '') {        
+                arrayUsers.push(user);
+                localStorage.setItem('localStorageUsers', JSON.stringify(arrayUsers));
+                clearSignUp();
+                signUpForm.style.display = 'none';
+                goSignUpForm.style.display = "block";
+                goSignInForm.style.display = "none";
+                signInForm.style.display = "block";
+            }
+    
+        })       
        
-        if (user.email !== '') {        
-            arrayUsers.push(user);
-            localStorage.setItem('localStorageUsers', JSON.stringify(arrayUsers));
-            clearSignUp();
-            signUpForm.style.display = 'none';
-            goSignUpForm.style.display = "block";
-            goSignInForm.style.display = "none";
-            signInForm.style.display = "block";
-        }
-
+        
     }
 
 } //end SIGN UP function
@@ -162,7 +171,7 @@ function signIn() {
     } else {
         signInForm.style.display = 'none';
 
-        let newArrayUsers = [];
+        //let newArrayUsers = [];
         let email = document.getElementById('sign-in-e-mail').value;
         let password = document.getElementById('sign-in-password').value;
         let activeUser = new User(undefined, undefined, email, password);
