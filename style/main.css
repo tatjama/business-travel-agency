@@ -65,8 +65,8 @@ html {
 /*----------LIFE--------------------*/
  /*HEADER*/
         
- #zaglavljeLife {
-    background-image: url("../pictures/img8.jpg");
+ #header-life {
+    background-image: url("../images/city_lights.jpg");
     background-position-y:75%;    
     height: 40%;    
 }
