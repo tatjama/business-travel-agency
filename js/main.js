@@ -1,10 +1,10 @@
 //HUMBURGER MENU
 function nav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
+    var x = document.getElementById("my-top-nav");
+    if (x.className === "top-nav") {
         x.className += " responsive";
     } else {
-        x.className = "topnav";
+        x.className = "top-nav";
     }
 }
 //CHECK USER
@@ -15,21 +15,29 @@ function checkActiveUser() {
     //U ZAVISNOSTI OD STATUSA OTVARAJU SE OPCIJE KORISNIKU
     let activeUser = JSON.parse(sessionStorage.getItem('user')) || {};
     console.log(activeUser);
+    const messageEl = document.getElementById('message');
+    const providersEl = document.getElementById('providers');
+    const chooseDestinationButton = document.getElementById('choose-destination');
+    chooseDestinationButton.addEventListener('click', chooseDestination);
 
     if (activeUser.status == 0) {
-        document.getElementById('message').innerHTML =
-            'Hello  <span id = "trenutnoUlogovani">' + activeUser.name + " " + activeUser.surname + '</span> Your status is Administrator';
-        document.getElementById('providers').style.display = "block";
+        messageEl.innerHTML =
+            'Hello  <span >' + activeUser.name + " " + activeUser.surname + '</span> Your status is Administrator';
+        providersEl.style.display = "block";
     } else if (activeUser.status == 1) {
-        document.getElementById('message').innerHTML = 
-        'Hello  <span id = "trenutnoUlogovani">' + activeUser.name + " " + activeUser.surname + '</span> Your status is User';
+        messageEl.innerHTML = 
+        'Hello  <span >' + activeUser.name + " " + activeUser.surname + '</span> Your status is User';
        
-        document.getElementById('providers').style.display = "none";
+        providersEl.style.display = "none";
     } else {
-        alert('Neovlasceni korisnik...');
-        document.getElementById('myTopnav').style.display = "none";
-        document.getElementById('message').innerHTML = '<a href = "../index.html" >Sign Up</a>';
+        alert('Unauthorized user...');
+        document.getElementById('my-top-nav').style.display = "none";
+        messageEl.innerHTML = '<a href = "../index.html" >Sign Up</a>';
     }
+}
+
+function chooseDestination(){
+    alert('you choose destination!')
 }
 
 //SIGN OUT
@@ -38,9 +46,6 @@ function signOut() {
         status: 9,
         email: "guest"
     };
-    //praznimo localStoridze
-    //localStorage.removeItem('trenutnoulogovanikorisnik');
-    //smesta trenutno ulogovanog korisnika u localStoride
     sessionStorage.setItem('user', JSON.stringify(activeUser));
-    console.log(activeUser);
+    //console.log(activeUser);
 }
