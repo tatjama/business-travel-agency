@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Start</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />
+    
+</head>
+
+<body>
+    <!--TOPNAV-->
+
+    <div class="topnav" id="myTopnav">
+        <a id="home" class="active" href="#">Home</a>
+        <a id="lokacija" href="life.html">Life ...</a>
+        <a id="kontakt" href="accommodation.html">Accommodation</a>
+        <a id="galerija" href="enjoy.html">Enjoy ...</a>
+        <a id="feedback" href="feedback.html">Feedbacks</a>
+        <a id="providers" href="providers.html">Providers</a>
+        <a href="javascript:void(0);" class="icon" onclick="nav()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a id="signOut" href="../index.html" onclick="signOut()">Sign Out</a>
+    </div>
+
+
+    <header class="zaglavlje" id="zaglavljeHome">
+        <div id="message"></div>
+
+        
+
+            <form class="chooseDestination">      
+                
+               
+                <select class="nameCountry" >       
+                        <option value="1">Srbija</option>
+                        <option value="2">Grcka</option>
+                        <option value="3">Rusija</option>
+                        <option value="4">USA</option>
+                        </select>
+                        <br>
+                        
+               <!-- <input list="nameCity" id="city" name="nameCity"><br>-->
+                <select class="nameCity" >
+                            <option value="1">Belgrade</option>
+                            <option value="2">Thesaloniki</option>
+                            <option value="3">Chicago</option>
+                            <option value="4">Moskow</option>
+                        </select>
+                <br>
+                <button onclick="chooseDestination()">Select</button>
+
+            </form>
+       
+
+
+    </header>
+
+
+
+
+
+    <footer id="podnozje">
+        <p>Beograd, Milutina Milankovica 1, 011-111-1111</p>
+    </footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/signout.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

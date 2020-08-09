@@ -1,0 +1,364 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body,
+html {
+    height: 100%;
+    font-size: 14px;
+    margin: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0%;
+}
+/*-----------HEADER-----*/
+.zaglavlje {
+    background-repeat: no-repeat;
+    background-size: cover;   
+    padding: Spx;
+    text-align: center;
+}
+   
+#message {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    left: 30%;
+    padding: 10px;
+    text-shadow: black 2px 2px 2px;
+            transform: scale(1.2);
+}
+
+/*-------HOME-----*/
+
+/*HEADER*/
+
+#zaglavljeHome {
+    background-image: url("../images/metropolis.jpg");
+    background-position: center;    
+    height: 100%;
+}
+
+/*HEADER*/
+
+/*-------ACCOMMODATION-----*/
+#zaglavljeAccommodation {
+    background-image: url("../pictures/img5.jpg");
+    background-position-y: 80%;    
+    height: 40%;
+}
+   
+
+/***********************************/
+/*--------ENJOY-------*/
+
+/*HEADER*/
+
+#zaglavljeEnjoy {
+    background-image: url("../pictures/img3.jpg");
+    background-position-y: 30%;    
+    height: 40%;    
+}
+/***********************************/
+/*----------LIFE--------------------*/
+ /*HEADER*/
+        
+ #zaglavljeLife {
+    background-image: url("../pictures/img8.jpg");
+    background-position-y:75%;    
+    height: 40%;    
+}
+/*************************************************
+/*--------------PROVIDERS--------------------*/
+#zaglavljeProviders {
+    background-image: url("../pictures/img2.jpg ");
+    background-position: center;    
+    height: 40%;    
+}
+
+/*********************************/
+/*-------------FEEDBACK-------------*/
+#zaglavljeFeedback {
+    background-image: url("../pictures/img32.jpeg ");
+    background-position: center;    
+    height: 40%;
+    }   
+    
+
+    /*NAVIGATION*/
+
+    a {
+        color: white;
+        text-decoration: none;       
+    } 
+    .topnav {
+        overflow: hidden;
+        background-color: black;
+        transition: transform .2s;
+    }    
+    .topnav a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    
+    .topnav a:hover {
+        text-shadow: black 2px 2px 2px;
+        transform: scale(1.1);
+    }
+    
+    .active {
+        background-color: gray;
+        color: chocolate;
+        height: 65px;
+    }
+    
+    .topnav .icon {
+        display: none;
+        text-align: center;
+    }
+    
+    
+    /*RESPONSIVE*/
+    
+   
+    
+    @media screen and (max-width: 1000px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: center;
+        }
+    }
+    
+    /*OMOTAC*/    
+    
+    .omotac {
+        padding: 20px;
+    }
+
+    /*SELECT*/
+fieldset {
+    text-align: right;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+input, select {
+    padding: 10px;
+    width: 200px;
+    margin: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(23, 88, 88);
+    color: white;
+    font-weight: bold;
+    width: 130px;
+}
+
+button:hover {
+    background-color: slategray;
+}
+
+
+    /*SEKCIJA*/
+    
+    .sekcija {
+        text-align: center;        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .sekcija figure {
+        width: 150px;
+        margin: auto;
+        font-weight: bold;
+        text-shadow: black 1px 1px;
+    }
+    
+    .sekcija figure img {
+        width: 150px;
+        height: 150px;
+        border: solid 1px white;
+        margin: 10px;
+        box-shadow: gray 0px 0px 10px;
+        transition: transform .2s;
+    }
+    
+    .sekcija figure img:hover {
+        transform: scale(1.2);
+    }
+    
+    
+    h2 {
+        color: black;
+        padding: 0% 4%;
+    }
+
+/*    
+    #glavni {
+        padding: 3%;
+        background-color: white;
+    }*/
+
+ /*ADD COMMENT--ACCOMMODATION*/
+/*SHOW TRANSPORTATION -- ENJOY*/
+/*SHOW TRANSPORTATION -- LIFE*/
+/*SHOW TRANSPORTATION -- PROVIDERS*/
+
+#showTransportation,
+#userComment {
+border: darkcyan solid 1px;
+border-radius: 10px;
+margin: 20px;
+padding: 10px;
+}
+
+.middleWrapper {
+border-radius: 10px;
+margin: 20px;
+padding: 10px;
+}
+
+.providerDiv,
+.userComment {
+border: darkcyan dashed 4px;
+padding: 40px;
+margin: 40px;
+}
+
+.provider,
+.providerDetail {
+padding: 10px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+.fa {
+font-size: 25px;
+}
+
+.checked {
+color: darkcyan;
+}
+
+.providerLogo {
+height: 100px;
+width: 300px;
+}
+
+.left,
+.right {
+width: 50%;
+}
+
+
+/*COMMENT-ACCOMMODATION*/
+/*COMMENT --ENJOY*/
+/*COMMENT -- LIFE*/
+
+.comment {
+    border: double 1px grey;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.userImage {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.textComment {
+    width: 50%;
+}
+
+.fa {
+    font-size: 25px;
+}
+
+.checked {
+    color: darkcyan;
+}
+
+
+
+
+
+/*FORM TRANSPORTATION*/
+
+#nCity {
+    color: white;
+    font-weight: bold;
+}
+
+#transportationFromTo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*ADD FEEDBACK ABOUT TRANSPORTATION*/
+
+.messageRange {
+    background-color: darkcyan;
+    color: white;
+    padding: 5px;
+}
+
+.chooseDestination {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    font-size: 20px;
+    font-weight: bold;
+    background-color:transparent;
+    color: white;
+    width: 300px;
+    text-align: center;    
+    text-shadow: black 2px 2px 2px;
+    transform: scale(1.1);      
+    padding: 10px;
+    border-radius: 20px;
+}    
+    /*FOOTER*/
+
+    footer {
+        background-color: black;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        padding: 1% 3%;
+    }
