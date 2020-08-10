@@ -211,7 +211,7 @@ button:hover {
 /*SHOW TRANSPORTATION -- PROVIDERS*/
 
 #showTransportation,
-#userComment {
+#user-comment {
 border: darkcyan solid 1px;
 border-radius: 10px;
 margin: 20px;
@@ -225,7 +225,7 @@ padding: 10px;
 }
 
 .providerDiv,
-.userComment {
+.user-comment {
 border: darkcyan dashed 4px;
 padding: 40px;
 margin: 40px;

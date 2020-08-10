@@ -41,7 +41,7 @@
         <a href="accommodation.html">Accommodation</a>
         <a href="enjoy.html">Enjoy ...</a>
         <a href="feedback.html">Feedbacks</a>
-        <a href="providers.html">Providers</a>
+        <a id="providers" href="providers.html">Providers</a>
         <a href="javascript:void(0);" class="icon" onclick="nav()">
             <i class="fa fa-bars"></i>
         </a>
@@ -94,11 +94,11 @@
                 </ul>
                 <button id="showAdd" onclick="showAddComment()">Add comment</button>
         <!--FORM COMMENT-->
-                <div id="userComment" style="display: none">
+                <div id="user-comment" style="display: none">
                     <h1>Add feedback about Local transport</h1>
                     <p>or Add feedback about hotels, restaurants, cities...</p>
                     <div class="middleWrapper">
-                        <div class="userComment">
+                        <div class="user-comment">
                             <form>
                                 <div class="provider">
                                     <img class="providerLogo" src="../images/logoavio1.png">
@@ -293,48 +293,7 @@
         <p>Beograd, Milutina Milankovica 1, 011-111-1111</p>
     </footer>
     <script src="../js/main.js"></script>
-    <script>
-        function showAddComment() {
-            document.getElementById('userComment').style.display = "block";
-        }
-        function closeAddComment() {
-            document.getElementById('userComment').style.display = "none";
-        }
-        function showLocalTransport() {
-            document.getElementById('transport').style.display = "block";
-            document.getElementById('food').style.display = "none";
-            document.getElementById('safety').style.display = "none";
-            document.getElementById('culture').style.display = "none";
-            document.getElementById('airport').style.display = "none";
-        }
-        function showFood() {
-            document.getElementById('transport').style.display = "none";
-            document.getElementById('food').style.display = "block";
-            document.getElementById('safety').style.display = "none";
-            document.getElementById('culture').style.display = "none";
-            document.getElementById('airport').style.display = "none";
-        }
-        function showSafety() {
-            document.getElementById('transport').style.display = "none";
-            document.getElementById('food').style.display = "none";
-            document.getElementById('safety').style.display = "block";
-            document.getElementById('culture').style.display = "none";
-            document.getElementById('airport').style.display = "none";
-        }
-        function showLocalCulture() {
-            document.getElementById('transport').style.display = "none";
-            document.getElementById('food').style.display = "none";
-            document.getElementById('safety').style.display = "none";
-            document.getElementById('culture').style.display = "block";
-            document.getElementById('airport').style.display = "none";
-        }
-        function showAirport() {
-            document.getElementById('transport').style.display = "none";
-            document.getElementById('food').style.display = "none";
-            document.getElementById('safety').style.display = "none";
-            document.getElementById('culture').style.display = "none";
-            document.getElementById('airport').style.display = "block";
-        }
+    <script src="../js/life.js">
     </script>
 </body>
 
