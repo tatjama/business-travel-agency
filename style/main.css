@@ -124,9 +124,9 @@ html {
     
     
     
-    /*OMOTAC*/    
+    /*WRAPPER*/    
     
-    .omotac {
+    .wrapper {
         padding: 20px;
     }
 
@@ -156,9 +156,9 @@ button:hover {
 }
 
 
-    /*SEKCIJA*/
+    /*SECTION-FIRST*/
     
-    .sekcija {
+    .section-first {
         text-align: center;        
         display: flex;
         flex-direction: row;
@@ -166,25 +166,32 @@ button:hover {
         justify-content: space-evenly;
     }
     
-    .sekcija figure {
+    figcaption{
+         color: slategray;
+    }
+    figcaption:hover{
+        color: darkcyan;
+    }
+    .section-first figure {
         width: 150px;
+        padding: 10px;
         margin: auto;
-        font-weight: bold;
-        text-shadow: black 1px 1px;
+        font-weight: bold;       
+    }
+    .section-first figure:hover {
+        transform: scale(1.2);
     }
     
-    .sekcija figure img {
-        width: 150px;
-        height: 150px;
+    .section-first figure img {
+        width: 130px;
+        height: 130px;
         border: solid 1px white;
         margin: 10px;
         box-shadow: gray 0px 0px 10px;
         transition: transform .2s;
     }
     
-    .sekcija figure img:hover {
-        transform: scale(1.2);
-    }
+    
     
     
     h2 {
