@@ -13,7 +13,7 @@
 <body>
     <header class="header" id="header-life" >
         <div id="message"></div>
-        <form></form>
+        <form class="choose-city">
          <select class="nameCountry" >       
                             <option value="1">Srbija</option>
                             <option value="2">Grcka</option>
@@ -30,7 +30,7 @@
                             </select>
                     <br>
                     <button id="choose-destination">Select</button>
-            </form>        
+        </form>          
     </header>
 
     <!--TOPNAV-->
@@ -97,11 +97,11 @@
                 <div id="user-comment" style="display: none">
                     <h1>Add feedback about Local transport</h1>
                     <p>or Add feedback about hotels, restaurants, cities...</p>
-                    <div class="middleWrapper">
+                    <div class="middle-wrapper">
                         <div class="user-comment">
                             <form>
                                 <div class="provider">
-                                    <img class="providerLogo" src="../images/logoavio1.png">
+                                    <img class="provider-logo" src="../images/logoavio1.png">
                                     <h2>Add feedback about AirSerbia</h2>
                                     <div>
                                         <span class="heading">User Rating</span>
@@ -115,11 +115,11 @@
                                 </div>
                                 Header:
                                 <br>
-                                <textarea cols="100" rows="1" id="commentHeader" placeholder="Try to describe your range"></textarea> <br> Comment:
+                                <textarea  rows="1" id="commentHeader" placeholder="Try to describe your range"></textarea> <br> Comment:
                                 <br>
-                                <textarea cols="100" rows="10" placeholder="Place for your comment..."></textarea>
+                                <textarea  rows="10" placeholder="Place for your comment..."></textarea>
                                 <br>
-                                <p class="messageRange">Click for range</p>
+                                <p class="message-range">Click for range</p>
                                 <div>
                                     5 star 
                                     <input type="radio" name="starRange" value="5">
@@ -163,16 +163,16 @@
                     </div>
                 </div>
 <!--COMMENTS-->
-                <div id="showComments">
+                <div>
                     <form>
                         <h2>Show Comments:</h2>
                         <div class="comment" id="comment1">
                             <div class="user">
-                                <img class="userImage" src="../images/traveler.jpeg" alt="user">
+                                <img class="avatar" src="../images/traveler.jpeg" alt="user">
                                 <p>Author: Pera Peric</p>
                                 <p>Date:01.01.2013</p>
                             </div>
-                            <div class="textComment">
+                            <div class="text-comment">
                                 <h2> I like this city</h2>
                                 <p>Comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus neque et nulla dictum, ac scelerisque quam ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam volutpat
                                     viverra dolor, ac efficitur libero commodo ac. Nam venenatis sodales sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis sed libero et purus feugiat blandit. Cras egestas lectus sit amet faucibus
@@ -195,11 +195,11 @@
                         </div>
                         <div class="comment" id="comment2">
                             <div class="user">
-                                <img class="userImage" src="../images/traveler.jpeg" alt="user">
-                                <p>Author: Dusko Dugousko</p>
+                                <img class="avatar" src="../images/traveler.jpeg" alt="user">
+                                <p>Author:<br> Dusko Dugousko</p>
                                 <p>Date:02.02.2019</p>
                             </div>
-                            <div class="textComment">
+                            <div class="text-comment">
                                 <h2>Airplane is quite old...</h2>
                                 <p>Comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus neque et nulla dictum, ac scelerisque quam ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam volutpat
                                     viverra dolor, ac efficitur libero commodo ac. Nam venenatis sodales sollicitudin. Interdum et malesuada fames ac ante .
@@ -221,11 +221,11 @@
                         </div>
                         <div class="comment" id="comment3">
                             <div class="user">
-                                <img class="userImage" src="../images/traveler.jpeg" alt="user">
+                                <img class="avatar" src="../images/traveler.jpeg" alt="user">
                                 <p>Author: Marko Markovic</p>
                                 <p>Date:03.03.2003</p>
                             </div>
-                            <div class="textComment">
+                            <div class="text-comment">
                                 <h2>About a place</h2>
                                 <p>Comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus neque et nulla dictum, ac scelerisque quam ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam volutpat
                                     viverra dolor, ac efficitur libero commodo ac. Nam venenatis sodales sollicitudin. Interdum et malesuada fames a

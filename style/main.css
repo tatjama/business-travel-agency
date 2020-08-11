@@ -12,6 +12,7 @@ html {
     scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0%;
+    overflow-x: hidden;
 }
 /*-----------HEADER-----*/
 .header {
@@ -145,6 +146,7 @@ input, select {
 
 button {
     padding: 10px;
+    margin: 10px 10px 10px 0px;
     background-color: rgb(23, 88, 88);
     color: white;
     font-weight: bold;
@@ -196,7 +198,7 @@ button:hover {
     
     h2 {
         color: black;
-        padding: 0% 4%;
+        padding: 4%;
     }
 
 /*    
@@ -218,7 +220,7 @@ margin: 20px;
 padding: 10px;
 }
 
-.middleWrapper {
+.middle-wrapper {
 border-radius: 10px;
 margin: 20px;
 padding: 10px;
@@ -230,10 +232,12 @@ border: darkcyan dashed 4px;
 padding: 40px;
 margin: 40px;
 }
-
+textarea{
+    width: 100%;
+}
 .provider,
 .providerDetail {
-padding: 10px;
+
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -248,7 +252,7 @@ font-size: 25px;
 color: darkcyan;
 }
 
-.providerLogo {
+.provider-logo {
 height: 100px;
 width: 300px;
 }
@@ -266,26 +270,27 @@ width: 50%;
 .comment {
     border: double 1px grey;
     margin: 10px;
-    padding: 10px;
+    padding: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.userImage {
+.avatar {
     border-radius: 50%;
     width: 50px;
     height: 50px;
 }
 .user{
-    padding: 5px;
+    padding: 10px;
+    width: 130px;
 }
-.textComment {
+.text-comment {
     width: 50%;
-    padding: 5px;
+    padding: 10px;
 }
-.textComment h2 {
-    padding: 5px;
+.text-comment h2 {
+    padding: 0px 0px 15px 0px;
 }
 input[type="checkbox"]{
     width: 15px;
@@ -320,7 +325,7 @@ input[type="checkbox"]{
 
 /*ADD FEEDBACK ABOUT TRANSPORTATION*/
 
-.messageRange {
+.message-range {
     background-color: darkcyan;
     color: white;
     padding: 5px;
@@ -338,9 +343,17 @@ input[type="checkbox"]{
     text-align: center;    
     text-shadow: black 2px 2px 2px;
     transform: scale(1.1);      
-    padding: 10px;
+    padding: 10px 50px;
     border-radius: 20px;
-}    
+}   
+.choose-destination button {
+    margin: 4px;
+    width: 100%;
+} 
+.choose-city button {
+    width: 200px;
+    margin: 5px;
+}
     /*FOOTER*/
 
     footer {
@@ -383,18 +396,59 @@ input[type="checkbox"]{
     }
     .comment{
         flex-direction: column;
+        align-content: center;
+        padding: 10px;
     }
-    .textComment{
+    .text-comment{
         width: 100%;
+    }
+    p{
+        font-size: 10px;
+    }
+    h1{
+        font-size: medium;
+    }
+    h2{
+        font-size: small;
+    }
+    .heading{
+        font-size: x-small;
     }
 }
 @media screen and (max-width: 650px){
     .choose-destination {
         left: 25%;
     }
+    .provider-logo {
+        width: 150px;
+        height: 50px;
+    }
+    #showTransportation,
+    #user-comment {
+        border: darkcyan solid 1px;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 5px;
+    }
+   .middle-wrapper {
+        border-radius: 10px;
+        margin: 5px;
+        padding: 5px;
+    }
+
+   .providerDiv,
+   .user-comment {
+        border: darkcyan dashed 2px;
+        padding: 15px;
+        margin: 15px;
+    }
+
 }
 @media screen and (max-width: 500px){
     .choose-destination {
         left: 20%;
+    }
+    button {
+        width: 100%;
     }
 }
