@@ -17,7 +17,7 @@ function checkActiveUser() {
     console.log(activeUser);
     const messageEl = document.getElementById('message');
     const providersEl = document.getElementById('providers');
-    const chooseDestinationButton = document.getElementById('choose-destination');
+    const chooseDestinationButton = document.querySelector('.choose-destination-button');
     chooseDestinationButton.addEventListener('click', chooseDestination);
 
     if (activeUser.status == 0) {

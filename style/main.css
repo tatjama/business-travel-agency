@@ -45,8 +45,8 @@ html {
 /*HEADER*/
 
 /*-------ACCOMMODATION-----*/
-#zaglavljeAccommodation {
-    background-image: url("../pictures/img5.jpg");
+#header-accommodation {
+    background-image: url("../images/accomodation.jpg");
     background-position-y: 80%;    
     height: 40%;
 }

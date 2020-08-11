@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Accommodation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />
+    
+    
+</head>
+
+<body>
+
+
+
+    <header class="header" id="header-accommodation" >
+        <div id="message"></div>
+         <select class="nameCountry" >       
+                            <option value="1">Serbia</option>
+                            <option value="2">Greece</option>
+                            <option value="3">Russia</option>
+                            <option value="4">USA</option>
+                            </select>
+                    <br> 
+                    <br>
+                   <!-- <input list="nameCity" id="city" name="nameCity"><br>-->
+                    <select class="nameCity" >
+                                <option value="1">Belgrade</option>
+                                <option value="2">Thesaloniki</option>
+                                <option value="3">Chicago</option>
+                                <option value="4">Moscow</option>
+                            </select>
+                    <br>
+                    <button class="choose-destination-button">Select</button>
+
+            </form>
+        </div>-->
+        
+    </header>
+
+    <!--TOPNAV-->
+
+    <div class="top-nav" id="my-top-nav">
+        <a  href="./start.html">Home</a>
+        <a  href="./life.html">Life ...</a>
+        <a class="active"  href="#">Accommodation</a>
+        <a  href="enjoy.html">Enjoy ...</a>
+        <a  href="feedback.html">Feedbacks</a>
+        <a id="providers" href="providers.html">Providers</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="nav()">
+            <i class="fa fa-bars"></i>
+        </a>
+
+
+        <a id="signOut" href="../index.html" onclick="signOut()">Sign Out</a>
+
+    </div>
+
+    <div class="wrapper">
+          <h3>Accommodation....(Country-City)</h3>
+        <section class="section-first">
+
+            <figure>
+                <img src="../images/hotel.jpeg" onclick="showLocalTransport()" alt="space">
+                <figcaption>Hotel</figcaption>
+            </figure>
+            <figure>
+                <img src="../images/hostel.jpeg" onclick="showFood()" alt="food">
+                <figcaption>Hostel</figcaption>
+            </figure>
+            <figure>
+                <img src="../images/apartmant.jpeg" onclick="showSafety()" alt="hands">
+                <figcaption>Apartment</figcaption>
+            </figure>
+            <figure>
+                <img src="../images/home.jpeg" onclick="showLocalCulture()" alt="earth">
+                <figcaption>Home</figcaption>
+            </figure>
+            
+        </section>
+        <div class="localInformation">
+            <div style="display: none" id="transport">
+                <h1>Hotel</h1>
+                General Information about Local Accommodation:
+                <ul>
+                    <li>Quality</li>
+                    <li>Location</li>
+                </ul>
+                
+                <button id="showAdd" onclick="showAddComment()">Add comment</button>
+        <!--FORM COMMENT-->
+
+        <div id="user-comment" style="display: none">
+                <h1>Add feedback about Local Accommodation</h1>
+                <p>or Add feedback about hotels, restaurants, cities...</p>
+                <div class="middleWrapper">
+                    <div class="user-comment">
+                        <form>
+                            <div class="provider">
+                                <img class="providerLogo" src="../images/accomodation_logo.jpg">
+                                <h2>Add feedback about Hotel</h2>
+                                <div>
+                                    <span class="heading">User Rating</span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <p>4.1 average based on 254 reviews.</p>
+    
+                                </div>
+                            </div>
+                            Header:
+                            <br>
+                            <textarea cols="100" rows="1" id="commentHeader" placeholder="Try to describe your range"></textarea> <br> Comment:
+                            <br>
+                            <textarea cols="100" rows="10" placeholder="Place for your comment..."></textarea>
+                            <br>
+                            <p class="messageRange">Click for range</p>
+                            <div>
+                                5 star <input type="radio" name="starRange" value="5">
+                                <span class="fa fa-star checked" checked></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+    
+    
+                            </div>
+                            <div>
+                                4 star <input type="radio" name="starRange" value="4">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+    
+                            </div>
+                            <div>
+                                3 star <input type="radio" name="starRange" value="3">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+    
+                            </div>
+                            <div>
+                                2 star <input type="radio" name="starRange" value="2">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+    
+                            </div>
+                            <div>
+                                1 star <input type="radio" name="starRange" value="1">
+                                <span class="fa fa-star checked"></span>
+    
+                            </div>
+                            <br>
+                            <button type="submit">Add feedback</button>
+                            <button id="close" onclick="closeAddComment()">Close</button>
+    
+    
+    
+                        </form>
+                    </div>
+                </div>
+            </div>
+<!--COMMENTS-->
+<div id="showComments">
+        <form>
+            <h2>Show Comments:</h2>
+
+            <div class="comment" id="comment1">
+                <div class="user">
+                    <img class="avatar" src="../images/traveler.jpeg" alt="user">
+
+                    <p>Author: Pera Peric</p>
+                    <p>Date:01.01.2013</p>
+                </div>
+                <div class="text-comment">
+                    <h2> I like this city</h2>
+                    <p>Comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus neque et nulla dictum, ac scelerisque quam ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam volutpat
+                        viverra dolor, ac efficitur libero commodo ac. Nam venenatis sodales sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis sed libero et purus feugiat blandit. Cras egestas lectus sit amet faucibus
+                        maximus. Proin non nulla lectus.
+                    </p>
+
+                </div>
+                <div class="range">
+                    <div>
+                        <span class="heading">User Rating</span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+
+                    </div>
+                    <br><br>
+                    <input type="checkbox"> Choose comment
+                </div>
+            </div>
+            <div class="comment" id="comment2">
+                <div class="user">
+                    <img class="avatar" src="../images/traveler.jpeg" alt="user">
+
+                    <p>Author: Dusko Dugousko</p>
+                    <p>Date:02.02.2019</p>
+                </div>
+                <div class="text-comment">
+                    <h2>Airplane is quite old...</h2>
+                    <p>Comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus neque et nulla dictum, ac scelerisque quam ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam volutpat
+                        viverra dolor, ac efficitur libero commodo ac. Nam venenatis sodales sollicitudin. Interdum et malesuada fames ac ante .</p>
+
+                </div>
+                <div class="range">
+                    <div>
+                        <span class="heading">User Rating</span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+
+                    </div>
+                    <br><br>
+                    <input type="checkbox"> Choose comment
+                </div>
+            </div>
+
+            <div class="comment" id="comment3">
+                <div class="user">
+                    <img class="avatar" src="../images/traveler.jpeg" alt="user">
+
+                    <p>Author: Marko Markovic</p>
+                    <p>Date:03.03.2003</p>
+                </div>
+                <div class="text-comment">
+                    <h2>About a place</h2>
+                    <p>Comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus neque et nulla dictum, ac scelerisque quam ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam volutpat
+                        viverra dolor, ac efficitur libero commodo ac. Nam venenatis sodales sollicitudin. Interdum et malesuada fames a</p>
+
+                </div>
+                <div class="range">
+                    <div>
+                        <span class="heading">User Rating</span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+
+                    </div>
+                    <br><br>
+                    <input type="checkbox"> Choose comment
+                </div>
+            </div>
+            <button>Delete comment</button>
+
+
+        </form>
+
+    </div>
+
+
+            </div>
+            
+            <div style="display:none" id="food">
+                <h1>Hostel</h1>
+                General Information about Local Hostels:
+                
+
+
+            </div>
+            <div style="display:none" id="safety">
+                <h1>Apartments</h1>
+                General Information about Local Apartments:
+                
+
+
+
+            </div>
+            <div style="display: none" id="culture">
+                <h1>Home</h1>
+                General Information about Local Home:
+                
+
+
+
+            </div>
+            <div style="display: none" id="airport">
+                <h1>Airport</h1>
+                General Information about Airport:
+                <ul>
+                    <li>Airport1</li>
+                    <li>Airport2</li>
+                    <li>Transport from /to airport</li>
+
+                </ul>
+
+
+
+            </div>
+        </div>
+       
+        
+
+
+
+
+    </div>
+
+    <footer id="podnozje">
+        <p>Beograd, Milutina Milankovica 1, 011-111-1111</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/life.js"></script>
+    <script>
+       /* function showAddComment() {
+            document.getElementById('userComment').style.display = "block";
+        }
+
+        function closeAddComment() {
+            document.getElementById('userComment').style.display = "none";
+        }
+
+
+        function showLocalTransport() {
+            document.getElementById('transport').style.display = "block";
+            document.getElementById('food').style.display = "none";
+            document.getElementById('safety').style.display = "none";
+            document.getElementById('culture').style.display = "none";
+            document.getElementById('airport').style.display = "none";
+
+        }
+
+        function showFood() {
+            document.getElementById('transport').style.display = "none";
+            document.getElementById('food').style.display = "block";
+            document.getElementById('safety').style.display = "none";
+            document.getElementById('culture').style.display = "none";
+            document.getElementById('airport').style.display = "none";
+
+        }
+
+        function showSafety() {
+            document.getElementById('transport').style.display = "none";
+            document.getElementById('food').style.display = "none";
+            document.getElementById('safety').style.display = "block";
+            document.getElementById('culture').style.display = "none";
+            document.getElementById('airport').style.display = "none";
+
+        }
+
+        function showLocalCulture() {
+            document.getElementById('transport').style.display = "none";
+            document.getElementById('food').style.display = "none";
+            document.getElementById('safety').style.display = "none";
+            document.getElementById('culture').style.display = "block";
+            document.getElementById('airport').style.display = "none";
+
+        }
+
+        function showAirport() {
+            document.getElementById('transport').style.display = "none";
+            document.getElementById('food').style.display = "none";
+            document.getElementById('safety').style.display = "none";
+            document.getElementById('culture').style.display = "none";
+            document.getElementById('airport').style.display = "block";
+
+        }*/
+    </script>
+</body>
+
+</html>
