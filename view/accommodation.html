@@ -60,27 +60,34 @@
     <div class="wrapper">
           <h3>Accommodation....(Country-City)</h3>
         <section class="section-first">
-
             <figure>
-                <img src="../images/hotel.jpeg" onclick="showLocalTransport()" alt="space">
-                <figcaption>Hotel</figcaption>
+                <a href="#transport" onclick="showLocalTransport()">
+                  <img src="../images/hotel.jpeg"  alt="hotel">
+                  <figcaption>Hotel</figcaption>
+                </a>
             </figure>
             <figure>
-                <img src="../images/hostel.jpeg" onclick="showFood()" alt="food">
-                <figcaption>Hostel</figcaption>
+                <a href="#food" onclick="showFood()">
+                  <img src="../images/hostel.jpeg"  alt="hostel">
+                  <figcaption>Hostel</figcaption>
+                </a>
             </figure>
             <figure>
-                <img src="../images/apartmant.jpeg" onclick="showSafety()" alt="hands">
-                <figcaption>Apartment</figcaption>
+                <a href="#safety" onclick="showSafety()">
+                  <img src="../images/apartmant.jpeg"  alt="apartmant">
+                  <figcaption>Apartment</figcaption>
+                </a>
             </figure>
             <figure>
-                <img src="../images/home.jpeg" onclick="showLocalCulture()" alt="earth">
-                <figcaption>Home</figcaption>
+                <a href="#culture" onclick="showLocalCulture()">
+                  <img src="../images/home.jpeg"  alt="house">
+                  <figcaption>House</figcaption>
+                </a>
             </figure>
             
         </section>
-        <div class="localInformation">
-            <div style="display: none" id="transport">
+        <section class="section-second">
+            <div style="display: none" id="transport" >
                 <h1>Hotel</h1>
                 General Information about Local Accommodation:
                 <ul>
@@ -94,11 +101,11 @@
         <div id="user-comment" style="display: none">
                 <h1>Add feedback about Local Accommodation</h1>
                 <p>or Add feedback about hotels, restaurants, cities...</p>
-                <div class="middleWrapper">
+                <div class="middle-wrapper">
                     <div class="user-comment">
                         <form>
                             <div class="provider">
-                                <img class="providerLogo" src="../images/accomodation_logo.jpg">
+                                <img class="provider-logo" src="../images/accomodation_logo.jpg">
                                 <h2>Add feedback about Hotel</h2>
                                 <div>
                                     <span class="heading">User Rating</span>
@@ -113,11 +120,11 @@
                             </div>
                             Header:
                             <br>
-                            <textarea cols="100" rows="1" id="commentHeader" placeholder="Try to describe your range"></textarea> <br> Comment:
+                            <textarea  rows="1" id="commentHeader" placeholder="Try to describe your range"></textarea> <br> Comment:
                             <br>
-                            <textarea cols="100" rows="10" placeholder="Place for your comment..."></textarea>
+                            <textarea  rows="10" placeholder="Place for your comment..."></textarea>
                             <br>
-                            <p class="messageRange">Click for range</p>
+                            <p class="message-range">Click for range</p>
                             <div>
                                 5 star <input type="radio" name="starRange" value="5">
                                 <span class="fa fa-star checked" checked></span>
@@ -165,7 +172,7 @@
                 </div>
             </div>
 <!--COMMENTS-->
-<div id="showComments">
+<div>
         <form>
             <h2>Show Comments:</h2>
 
@@ -279,8 +286,8 @@
 
             </div>
             <div style="display: none" id="culture">
-                <h1>Home</h1>
-                General Information about Local Home:
+                <h1>House</h1>
+                General Information about Local Housses:
                 
 
 
@@ -299,7 +306,7 @@
 
 
             </div>
-        </div>
+        </section>
        
         
 
@@ -314,61 +321,7 @@
 
     <script src="../js/main.js"></script>
     <script src="../js/life.js"></script>
-    <script>
-       /* function showAddComment() {
-            document.getElementById('userComment').style.display = "block";
-        }
-
-        function closeAddComment() {
-            document.getElementById('userComment').style.display = "none";
-        }
-
-
-        function showLocalTransport() {
-            document.getElementById('transport').style.display = "block";
-            document.getElementById('food').style.display = "none";
-            document.getElementById('safety').style.display = "none";
-            document.getElementById('culture').style.display = "none";
-            document.getElementById('airport').style.display = "none";
-
-        }
-
-        function showFood() {
-            document.getElementById('transport').style.display = "none";
-            document.getElementById('food').style.display = "block";
-            document.getElementById('safety').style.display = "none";
-            document.getElementById('culture').style.display = "none";
-            document.getElementById('airport').style.display = "none";
-
-        }
-
-        function showSafety() {
-            document.getElementById('transport').style.display = "none";
-            document.getElementById('food').style.display = "none";
-            document.getElementById('safety').style.display = "block";
-            document.getElementById('culture').style.display = "none";
-            document.getElementById('airport').style.display = "none";
-
-        }
-
-        function showLocalCulture() {
-            document.getElementById('transport').style.display = "none";
-            document.getElementById('food').style.display = "none";
-            document.getElementById('safety').style.display = "none";
-            document.getElementById('culture').style.display = "block";
-            document.getElementById('airport').style.display = "none";
-
-        }
-
-        function showAirport() {
-            document.getElementById('transport').style.display = "none";
-            document.getElementById('food').style.display = "none";
-            document.getElementById('safety').style.display = "none";
-            document.getElementById('culture').style.display = "none";
-            document.getElementById('airport').style.display = "block";
-
-        }*/
-    </script>
+    
 </body>
 
 </html>

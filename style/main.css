@@ -158,16 +158,12 @@ button:hover {
     
     
     
-    /*WRAPPER*/    
-    
+    /*WRAPPER*/      
     .wrapper {
         padding: 20px;
     }
 
- 
-
-    /*SECTION-FIRST*/
-    
+    /*SECTION-FIRST*/    
     .section-first {
         text-align: center;        
         display: flex;
@@ -199,22 +195,15 @@ button:hover {
         margin: 10px;
         box-shadow: gray 0px 0px 10px;
         transition: transform .2s;
-    }
-    
-    
-    
-    
+    }   
     h2 {
         color: black;
         padding: 4%;
     }
-
-/*    
-    #glavni {
-        padding: 3%;
-        background-color: white;
-    }*/
-
+/***SECTION-SECOND**/
+.section-second{
+    padding-top: 50px;
+}
  /*ADD COMMENT--ACCOMMODATION*/
 /*SHOW TRANSPORTATION -- ENJOY*/
 /*SHOW TRANSPORTATION -- LIFE*/
