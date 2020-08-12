@@ -20,8 +20,8 @@ html {
     background-size: cover;   
     padding: Spx;
     text-align: center;
-}
-   
+    height: 250px;
+}   
 #message {
     color: white;
     font-size: 15px;
@@ -29,7 +29,44 @@ html {
     position: relative;
     right: 0%;
     padding: 10px;
-    transform: scale(1.2);
+}
+.choose-destination {
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+    background-color:transparent;
+    color: white;
+    width: 300px;
+    text-align: center;            
+    padding: 10px 50px;
+}   
+.choose-destination button {
+    margin: 4px;
+    width: 100%;
+} 
+.choose-city button {
+    width: 200px;
+    margin: 5px;
+}
+   /*SELECT*/
+
+   input, select {
+    padding: 10px;
+    width: 200px;
+    margin: 5px;
+}
+
+button {
+    padding: 10px;
+    margin: 10px 10px 10px 0px;
+    background-color: rgb(23, 88, 88);
+    color: white;
+    font-weight: bold;
+    width: 130px;
+}
+
+button:hover {
+    background-color: slategray;
 }
 
 /*-------HOME-----*/
@@ -38,8 +75,9 @@ html {
 
 #header-home {
     background-image: url("../images/metropolis.jpg");
-    background-position: center;    
+    background-position: center;   
     height: 100%;
+    padding: 50px 0px;
 }
 
 /*HEADER*/
@@ -48,7 +86,6 @@ html {
 #header-accommodation {
     background-image: url("../images/accomodation.jpg");
     background-position-y: 80%;    
-    height: 40%;
 }
    
 
@@ -59,8 +96,7 @@ html {
 
 #zaglavljeEnjoy {
     background-image: url("../pictures/img3.jpg");
-    background-position-y: 30%;    
-    height: 40%;    
+    background-position-y: 30%;   
 }
 /***********************************/
 /*----------LIFE--------------------*/
@@ -69,22 +105,19 @@ html {
  #header-life {
     background-image: url("../images/city_lights.jpg");
     background-position-y:75%;    
-    height: 40%;    
 }
 /*************************************************
 /*--------------PROVIDERS--------------------*/
 #zaglavljeProviders {
     background-image: url("../pictures/img2.jpg ");
-    background-position: center;    
-    height: 40%;    
+    background-position: center; 
 }
 
 /*********************************/
 /*-------------FEEDBACK-------------*/
 #zaglavljeFeedback {
     background-image: url("../pictures/img32.jpeg ");
-    background-position: center;    
-    height: 40%;
+    background-position: center;  
     }   
     
 
@@ -131,32 +164,7 @@ html {
         padding: 20px;
     }
 
-    /*SELECT*/
-fieldset {
-    text-align: right;
-    border-radius: 10px;
-    margin: 20px;
-}
-
-input, select {
-    padding: 10px;
-    width: 200px;
-    margin: 5px;
-}
-
-button {
-    padding: 10px;
-    margin: 10px 10px 10px 0px;
-    background-color: rgb(23, 88, 88);
-    color: white;
-    font-weight: bold;
-    width: 130px;
-}
-
-button:hover {
-    background-color: slategray;
-}
-
+ 
 
     /*SECTION-FIRST*/
     
@@ -332,29 +340,6 @@ input[type="radio"] {
     padding: 5px;
 }
 
-.choose-destination {
-    position: absolute;
-    top: 40%;
-    left: 39%;
-    font-size: 20px;
-    font-weight: bold;
-    background-color:transparent;
-    color: white;
-    width: 300px;
-    text-align: center;    
-    text-shadow: black 2px 2px 2px;
-    transform: scale(1.1);      
-    padding: 10px 50px;
-    border-radius: 20px;
-}   
-.choose-destination button {
-    margin: 4px;
-    width: 100%;
-} 
-.choose-city button {
-    width: 200px;
-    margin: 5px;
-}
     /*FOOTER*/
 
     footer {
@@ -387,14 +372,8 @@ input[type="radio"] {
         display: block;
         text-align: center;
     }
-    .choose-destination {
-        left: 35%;
-    }
 }
 @media screen and (max-width: 800px){
-    .choose-destination {
-        left: 30%;
-    }
     .comment{
         flex-direction: column;
         align-content: center;
@@ -417,9 +396,6 @@ input[type="radio"] {
     }
 }
 @media screen and (max-width: 650px){
-    .choose-destination {
-        left: 25%;
-    }
     .provider-logo {
         width: 150px;
         height: 50px;
@@ -443,12 +419,8 @@ input[type="radio"] {
         padding: 15px;
         margin: 15px;
     }
-
 }
-@media screen and (max-width: 500px){
-    .choose-destination {
-        left: 20%;
-    }
+@media screen and (max-width: 500px){   
     button {
         width: 100%;
     }
