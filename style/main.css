@@ -115,8 +115,8 @@ button:hover {
 
 /*********************************/
 /*-------------FEEDBACK-------------*/
-#zaglavljeFeedback {
-    background-image: url("../pictures/img32.jpeg ");
+#header-feedback {
+    background-image: url("../images/feedback.jpeg ");
     background-position: center;  
     }   
     
