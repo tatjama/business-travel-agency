@@ -96,8 +96,8 @@ button:hover {
 
 /*HEADER*/
 
-#zaglavljeEnjoy {
-    background-image: url("../pictures/img3.jpg");
+#header-enjoy {
+    background-image: url("../images/enjoy.jpg");
     background-position-y: 30%;   
 }
 /***********************************/

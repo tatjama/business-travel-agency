@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Enjoy your travel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />    
+</head>
+
+<body>
+    <!--HEADER-->
+    <header class="header" id="header-enjoy" >
+        <div id="message"></div>
+        <h1 id="nCity">Country-City</h1>
+    </header>
+    <!--TOPNAV-->
+
+    <div class="top-nav" id="my-top-nav">
+        <a class="active" href="./start.html">Home</a>
+        <a href="./life.html">Life ...</a>
+        <a href="./accommodation.html">Accommodation</a>
+        <a class="active" href="#">Enjoy ...</a>
+        <a href="feedback.html">Feedbacks</a>
+        <a id="providers" href="providers.html">Providers</a>
+        <a href="javascript:void(0);" class="icon" onclick="nav()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a id="signOut" href="index.html" onclick="signOut()">Sign Out</a>
+    </div> 
+
+    <!--MAIN-->
+    <div class="wrapper">
+        <!--TRANSPORTATION FORM-->
+        <form id="formTransportation">
+            <fieldset>
+                <legend>Transportation</legend>
+                <div id="transportationFromTo">
+                    <div id="from">
+
+                        FROM:
+                        <br> Country: <input list="countryFrom" name="countryFrom" id="fromCountry" placeholder="Choose Country FROM" autofocus required>
+                        <datalist id="countryFrom">       
+                            <option value="Srbija">
+                            <option value="Grcka">
+                            <option value="Rusija">
+                            <option value="USA">
+                            </datalist>
+                        <br>
+                        <br> City :<input list="cityFrom" name="cityFrom" placeholder="City from"><br>
+                        <datalist id="cityFrom">
+                            <option value="Belgrade">
+                            <option value="Thesaloniki">
+                            <option value="Chicago">
+                            <option value="Moskow">
+                        </datalist>
+                    </div>
+                    <div id="to">
+                        TO:
+                        <br> Country:<input list="countryTo" name="countryTo" id="toCountry" placeholder="Choose Country TO" required>
+                        <datalist id="countryTo">       
+                                    <option value="Srbija">
+                                    <option value="Grcka">
+                                    <option value="Rusija">
+                                    <option value="USA">
+                                    </datalist>
+                        <br>
+                        <br> City :<input list="cityTo" name="cityTo" placeholder="City to"><br>
+                        <datalist id="cityTo">
+                                    <option value="Belgrade">
+                                    <option value="Thesaloniki">
+                                    <option value="Chicago">
+                                    <option value="Moskow">
+                                </datalist>
+                    </div>
+
+                    <div id="type">
+                        Transportation Type
+
+                        <br> <span>Airplane    </span>
+                        <input type="radio" name="transportationType" id="airplane">
+                        <br>
+                        <span>BUS</span>
+                        <input type="radio" name="transportationType" id="bus">
+                        <br> <span>Company car    </span>
+                        <input type="radio" name="transportationType" id="companyCar">
+                        <br>
+                        <span>Rent a car</span>
+                        <input type="radio" name="transportationType" id="rentACar">
+                        <br> <span>Train   </span>
+                        <input type="radio" name="transportationType" id="train">
+                        <br>
+                        <span>Taxi</span>
+                        <input type="radio" name="transportationType" id="taxi">
+                    </div>
+
+                    <div>
+                        <br>
+                        <br>
+                        <button type="submit" onclick="showTransportation()">
+                            <a href="#showTransportation"> Submit</a></button>
+                        <button type="reset" onclick="obrisi()">Clean</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+        <!--SHOW TRANSPORTATION-->
+
+        <div id="showTransportation" style="display: none">
+            <h1>City FROM: Belgrade - City TO: Budapest</h1>
+            <button><a href="./life.html">Life in...</a> </button>
+            <div class="middleWrapper">
+                <h2> Airplane</h2>
+                <div class="providerDiv">
+
+                    <div class="provider">
+                        <img class="providerLogo" src="../images/logoavio1.png">
+
+                        <h2>Provider name: AirSerbia
+                            <br>Type: Airplane
+                        </h2>
+
+
+                        <div>
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <p>4.1 average based on 254 reviews.</p>
+                            <button onclick="providerDetail()"><a href="#showProviderDetail"> Details</a></button>
+                            <button onclick="showAddComment()"><a href="#userComment">Add Comment</a></button>
+                        </div>
+
+                    </div>
+                    <div class="showProviderDetail" id="showProviderDetail" style="display: none">
+                        <hr style="border:3px solid #f1f1f1">
+
+                        <div class="providerDetail">
+                            <div class="left">
+                                <p>Name: AirSerbia</p>
+                                <p>Country: Serbia</p>
+                                <p>City: Belgrade</p>
+                                <p>Adress: Bulevar umetnosti bb</p>
+                                <p>Phone:+381-11-444-444</p>
+                                <p>Contact:</p>
+                            </div>
+                            <div class="right">
+                                <h3>About company</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus neque et nulla dictum, ac scelerisque quam ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam volutpat
+                                    viverra dolor, ac efficitur libero commodo ac. Nam venenatis sodales sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis sed libero et purus feugiat blandit. Cras egestas lectus sit amet
+                                    faucibus maximus. Proin non nulla lectus.</p>
+                                <button onclick="providerFeedback()">
+                                    <a href="#showProviderFeedback">Feedback</a>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="showProviderFeedback" id="showProviderFeedback" style="display:none">
+                        <hr style="border:3px solid #f1f1f1">
+                        <div class="providerFeedback">
+                            <div>
+                                <h2>User rating </h2>
+                                <div>
+                                    <span class="heading">5 star </span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span> 54 reviews.</span>
+                                </div>
+                                <div>
+                                    <span class="heading">4 star </span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star "></span>
+                                    <span> 104 reviews.</span>
+                                </div>
+                                <div>
+                                    <span class="heading">3 star </span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <span> 50 reviews.</span>
+                                </div>
+                                <div>
+                                    <span class="heading">2 star </span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <span> 45 reviews.</span>
+                                </div>
+                                <div>
+                                    <span class="heading">1 star </span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <span> 1 reviews.</span>
+                                </div>
+
+
+
+
+                            </div>
+                            <form style="display: none" id="formComment">
+                                <fieldset>
+                                    <legend>Comment</legend>
+                                    Choose category:
+                                    <br>
+
+                                    <br> <span>Local transport    </span>
+                                    <input type="radio" name="category" id="transport" checked>
+                                    <br>
+                                    <span>Food & Entertainment</span>
+                                    <input type="radio" name="category" id="food">
+                                    <br> <span>Safety    </span>
+                                    <input type="radio" name="category" id="safety">
+                                    <br>
+                                    <span>Local culture</span>
+                                    <input type="radio" name="category" id="localCulture">
+                                    <br><span>Airport</span>
+                                    <input type="radio" name="category" id="localCulture">
+                                    <br>Add your comment:
+                                    <br>
+                                    <br>
+                                    <textarea cols="60" rows="10" name="information" id="informationLife" placeholder="Write some information about life in the city"></textarea>
+                                    <br>
+
+                                    <button type="button" onclick="addInformation()">Comment</button>
+                                    <button type="reset" onclick="obrisi()">Clean</button>
+
+
+                                </fieldset>
+                            </form>
+                            <!--COMMENTS-->
+                            <div id="showComments">
+                                <form>
+                                    <h2>Show Comments:</h2>
+
+                                    <div class="comment" id="comment1">
+                                        <div class="user">
+                                            <img class="userImage" src="../images/traveler.jpeg" alt="user">
+
+                                            <p>Author: Pera Peric</p>
+                                            <p>Date:01.01.2013</p>
+                                        </div>
+                                        <div class="textComment">
+                                            <h2> Exelent company</h2>
+                                            <p>Comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus neque et nulla dictum, ac scelerisque quam ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                                cubilia Curae; Nam volutpat viverra dolor, ac efficitur libero commodo ac. Nam venenatis sodales sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis sed libero et purus feugiat
+                                                blandit. Cras egestas lectus sit amet faucibus maximus. Proin non nulla lectus.
+                                            </p>
+
+                                        </div>
+                                        <div class="range">
+                                            <div>
+                                                <span class="heading">User Rating</span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+
+                                            </div>
+                                            <br><br>
+                                            <input type="checkbox"> Choose comment
+                                        </div>
+                                    </div>
+                                    <div class="comment" id="comment2">
+                                        <div class="user">
+                                            <img class="userImage" src="../images/traveler.jpeg" alt="user">
+
+                                            <p>Author: Dusko Dugousko</p>
+                                            <p>Date:02.02.2019</p>
+                                        </div>
+                                        <div class="textComment">
+                                            <h2>Airplane is quite old...</h2>
+                                            <p>Comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus neque et nulla dictum, ac scelerisque quam ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                                cubilia Curae; Nam volutpat viverra dolor, ac efficitur libero commodo ac. Nam venenatis sodales sollicitudin. Interdum et malesuada fames ac ante .</p>
+
+                                        </div>
+                                        <div class="range">
+                                            <div>
+                                                <span class="heading">User Rating</span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star "></span>
+                                                <span class="fa fa-star "></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+
+                                            </div>
+                                            <br><br>
+                                            <input type="checkbox"> Choose comment
+                                        </div>
+                                    </div>
+
+                                    <div class="comment" id="comment3">
+                                        <div class="user">
+                                            <img class="userImage" src="../images/traveler.jpeg" alt="user">
+
+                                            <p>Author: Marko Markovic</p>
+                                            <p>Date:03.03.2003</p>
+                                        </div>
+                                        <div class="textComment">
+                                            <h2>Wonderfull trip</h2>
+                                            <p>Comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus neque et nulla dictum, ac scelerisque quam ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                                cubilia Curae; Nam volutpat viverra dolor, ac efficitur libero commodo ac. Nam venenatis sodales sollicitudin. Interdum et malesuada fames a</p>
+
+                                        </div>
+                                        <div class="range">
+                                            <div>
+                                                <span class="heading">User Rating</span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+
+                                            </div>
+                                            <br><br>
+                                            <input type="checkbox"> Choose comment
+                                        </div>
+                                    </div>
+                                    <button>Delete comment</button>
+
+
+
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div id="userComment" style="display: none">
+            <h1>Add feedback about transportation</h1>
+            <p>or Add feedback about hotels, restoraunts, cities...</p>
+            <div class="middleWrapper">
+                <div class="userComment">
+                    <form>
+                        <div class="provider">
+                            <img class="providerLogo" src="../images/logoavio1.png">
+                            <h2>Add feedback about AirSerbia</h2>
+                            <div>
+                                <span class="heading">User Rating</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <p>4.1 average based on 254 reviews.</p>
+
+                            </div>
+                        </div>
+                        Header:
+                        <br>
+                        <textarea cols="100" rows="1" id="commentHeader" placeholder="Try to describe your range"></textarea> <br> Comment:
+                        <br>
+                        <textarea cols="100" rows="10" placeholder="Place for your comment..."></textarea>
+                        <br>
+                        <p class="messageRange">Click for range</p>
+                        <div>
+                            5 star <input type="radio" name="starRange" value="5">
+                            <span class="fa fa-star checked" checked></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+
+
+                        </div>
+                        <div>
+                            4 star <input type="radio" name="starRange" value="4">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+
+                        </div>
+                        <div>
+                            3 star <input type="radio" name="starRange" value="3">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+
+                        </div>
+                        <div>
+                            2 star <input type="radio" name="starRange" value="2">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+
+                        </div>
+                        <div>
+                            1 star <input type="radio" name="starRange" value="1">
+                            <span class="fa fa-star checked"></span>
+
+                        </div>
+                        <br>
+                        <button type="submit">Add feedback</button>
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <footer id="podnozje">
+        <p>Beograd, Milutina Milankovica 1, 011-111-1111</p>
+    </footer>
+
+
+    <script src="../js/main.js"></script>
+    <script>
+        function showTransportation() {
+            document.getElementById('showTransportation').style.display = "block";
+        }
+
+        function providerDetail() {
+
+            document.querySelector('.showProviderDetail').style.display = "block";
+        }
+
+        function providerFeedback() {
+            document.querySelector('.showProviderFeedback').style.display = "block";
+        }
+
+        function showAddComment() {
+            document.getElementById('userComment').style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
