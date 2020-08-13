@@ -147,7 +147,6 @@ button:hover {
     .active {
         background-color: slategray;
         color: wheat;
-        height: 65px;
     }    
     .top-nav .icon {
         display: none;
