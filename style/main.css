@@ -339,25 +339,8 @@ input[type="radio"] {
 /*RESPONSIVE*/    
 
 @media screen and (max-width: 800px){
-    .top-nav a:not(:first-child) {
-        display: none;
-    }
-    .top-nav a.icon {
-        float: right;
-        display: block;
-    }
-    .top-nav.responsive {
-        position: relative;
-    }
-    .top-nav.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .top-nav.responsive a {
-        float: none;
-        display: block;
-        text-align: center;
+    .top-nav a{
+        padding: 10px;
     }
     .provider-logo {
         width: 150px;
@@ -391,6 +374,27 @@ input[type="radio"] {
     }
 }
 @media screen and (max-width: 650px){
+    .top-nav a:not(:first-child) {
+        display: none;
+    }
+    .top-nav a.icon {
+        float: right;
+        display: block;
+    }
+    .top-nav.responsive {
+        position: relative;
+    }
+    .top-nav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .top-nav.responsive a {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+   
    
     #showTransportation,
     #user-comment {
