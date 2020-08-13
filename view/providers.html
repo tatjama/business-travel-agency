@@ -7,34 +7,49 @@
     <title>Providers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />
   
 </head>
 
 <body>
-    <header class="zaglavlje" id="zaglavljeProviders" >
+    <header class="header" id="header-providers" >
         <div id="message" style="color: rgb(52, 87, 128)"></div>
+        <form class="choose-city">
+            <select class="nameCountry" >       
+                <option value="1">Local transport</option>
+                <option value="2">Avio transport</option>
+                <option value="3">Airport</option>
+                <option value="4">Accommodation</option>
+            </select>
+                    <br> 
+                    <br>
+            <select class="nameCity" >
+                <option value="1">Train</option>
+                <option value="2">Rent a car</option>
+                <option value="3">BUS</option>
+                <option value="4">Taxi</option>
+            </select>
+                    <br>
+            <button class="choose-destination-button">Select</button>
+        </form>
     </header>
 
     <!--TOPNAV-->
 
-    <div class=" topnav " id="myTopnav ">
-        <a id="home " class="active " href="home.html ">Home</a>
-        <a id="lokacija " href="life.html ">Life ...</a>
-        <a id="kontakt " href="accommodation.html ">Accommodation</a>
-        <a id="galerija " href="enjoy.html ">Enjoy ...</a>
-        <a id="feedback " href="feedback.html ">Feedbacks</a>
-        <a id="providers" href="providers.html ">Providers</a>
-
+    <div class=" top-nav " id="my-top-nav">
+        <a  href="./start.html">Home</a>
+        <a  href="./life.html ">Life ...</a>
+        <a  href="./accommodation.html ">Accommodation</a>
+        <a href="./enjoy.html ">Enjoy ...</a>
+        <a href="./feedback.html ">Feedbacks</a>
+        <a id="providers" class="active " href="#">Providers</a>
         <a href="javascript:void(0); " class="icon " onclick="nav() ">
             <i class="fa fa-bars "></i>
         </a>
-
-
-        <a id="signOut " href="index.html " onclick="signOut() ">Sign Out</a>
+        <a id="signOut " href="../index.html " onclick="signOut() ">Sign Out</a>
     </div>
-
-    <div class="omotac">
+ 
+    <div class="wrapper">
         <!--PROVIDER SELECT-->
 
 
@@ -45,19 +60,20 @@
         <div id="showTransportation">
             <h1>Provider list:</h1>
 
-            <div class="middleWrapper ">
+            <div class="middle-wrapper ">
 
-                <div class="providerDiv ">
+                <div class="provider-div ">
 
                     <div class="provider ">
-                        <img class="providerLogo " src="pictures/logoavio1.png ">
+                        <div class="left">
+                        <img class="provider-logo " src="../images/logoavio1.png ">
 
                         <h2>Provider name: AirSerbia
                             <br>Type: Airplane
                         </h2>
 
-
-                        <div>
+                    </div>
+                        <div class="right">
                             <span class="heading ">User Rating</span>
                             <span class="fa fa-star checked "></span>
                             <span class="fa fa-star checked "></span>
@@ -65,15 +81,15 @@
                             <span class="fa fa-star "></span>
                             <span class="fa fa-star "></span>
                             <p>4.1 average based on 254 reviews.</p>
-                            <button onclick="providerDetail() "><a href="#providerDetail "> Details</a></button>
-                            <button onclick="showEditProvider() "><a href="#userComment ">Edit</a></button>
+                            <button onclick="showProviderDetail() "><a href="#providerDetail "> Details</a></button>
+                            <button onclick="showProviderEdit() "><a href="#userComment ">Edit</a></button>
                         </div>
 
                     </div>
-                    <div class="showProviderDetail " id="showProviderDetail " style="display: none ">
+                    <div class="show-provider-detail " id="showProviderDetail " style="display: none ">
                         <hr style="border:3px solid #f1f1f1 ">
 
-                        <div class="providerDetail " id="providerDetail">
+                        <div class="provider-detail " id="providerDetail">
                             <div class="left ">
                                 <p>Name: AirSerbia</p>
                                 <p>Country: Serbia</p>
@@ -95,10 +111,10 @@
                         </div>
                     </div>
 
-                    <form class="showEditProvider " id="showEditProvider" style="display: none ">
+                    <form class="show-provider-edit " id="showEditProvider" style="display: none ">
                         <hr style="border:3px solid #f1f1f1 ">
 
-                        <div class="providerDetail " id="providerDetail">
+                        <div class="provider-detail " id="providerDetail">
                             <div class="left ">
 
                                 <p>Type:</p>
@@ -123,8 +139,8 @@
                                 <h3>About company</h3>
                                 <textarea cols="50" rows="20"></textarea>
                                 <br>
-                                <button onclick="closeProviderDetail() ">
-                                            Close Details
+                                <button onclick="closeProviderEdit() ">
+                                            Close Edit
                                         </button>
                                 <button type="submit">Submit</button>
                             </div>
@@ -139,33 +155,11 @@
     </div>
 
 
-
-
     <footer id="podnozje ">
         <p>Beograd, Milutina Milankovica 1, 011-111-1111</p>
     </footer>
-    <script src="js/signout.js "></script>
-    <script src="js/main.js "></script>
-    <script src="js/nav.js "></script>
-    <script>
-        function showTransportation() {
-            document.getElementById('showTransportation').style.display = "block";
-        }
-
-        function providerDetail() {
-
-            document.querySelector('.showProviderDetail').style.display = "block";
-        }
-
-        function closeProviderDetail() {
-
-            document.querySelector('.showProviderDetail').style.display = "none";
-        }
-
-        function showEditProvider() {
-            document.querySelector('.showEditProvider').style.display = "block"
-        }
-    </script>
+    <script src="../js/main.js "></script>
+    <script src="../js/providers.js"></script>
 </body>
 
 </html>

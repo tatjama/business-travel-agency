@@ -108,8 +108,8 @@ button:hover {
 }
 /*************************************************
 /*--------------PROVIDERS--------------------*/
-#zaglavljeProviders {
-    background-image: url("../pictures/img2.jpg ");
+#header-providers {
+    background-image: url("../images/providers.jpg ");
     background-position: center; 
 }
 
@@ -122,7 +122,6 @@ button:hover {
     
 
     /*NAVIGATION*/
-
     a {
         color: white;
         text-decoration: none;       
@@ -138,26 +137,21 @@ button:hover {
         text-align: center;
         padding: 20px;
         text-transform: uppercase;
-    }
-    
+    }    
     .top-nav a:hover {
         text-shadow: black 2px 2px 2px;
         transform: scale(1.1);
-    }
-    
+    }    
     .active {
         background-color: slategray;
         color: wheat;
         height: 65px;
-    }
-    
+    }    
     .top-nav .icon {
         display: none;
         text-align: center;
     }
-    
-    
-    
+
     /*WRAPPER*/      
     .wrapper {
         padding: 20px;
@@ -186,8 +180,7 @@ button:hover {
     }
     .section-first figure:hover {
         transform: scale(1.2);
-    }
-    
+    }    
     .section-first figure img {
         width: 130px;
         height: 130px;
@@ -213,17 +206,17 @@ button:hover {
 #user-comment {
 border: darkcyan solid 1px;
 border-radius: 10px;
-margin: 20px;
+margin: 10px;
 padding: 10px;
 }
 
 .middle-wrapper {
 border-radius: 10px;
-margin: 20px;
+margin: 10px;
 padding: 10px;
 }
 
-.providerDiv,
+.provider-div,
 .user-comment {
 border: darkcyan dashed 4px;
 padding: 40px;
@@ -233,12 +226,12 @@ textarea{
     width: 100%;
 }
 .provider,
-.providerDetail {
-
+.provider-detail {
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 flex-wrap: wrap;
+padding: 10px;
 }
 
 .fa {
@@ -257,6 +250,7 @@ width: 300px;
 .left,
 .right {
 width: 50%;
+padding: 5px;
 }
 
 
@@ -340,7 +334,8 @@ input[type="radio"] {
         padding: 1% 3%;
     }
 /*RESPONSIVE*/    
-@media screen and (max-width: 1000px) {
+
+@media screen and (max-width: 800px){
     .top-nav a:not(:first-child) {
         display: none;
     }
@@ -361,8 +356,16 @@ input[type="radio"] {
         display: block;
         text-align: center;
     }
-}
-@media screen and (max-width: 800px){
+    .provider-logo {
+        width: 150px;
+        height: 50px;
+    }
+    .provider-div,
+   .user-comment {
+        border: darkcyan dashed 2px;
+        padding: 15px;
+        margin: 15px;
+    }
     .comment{
         flex-direction: column;
         align-content: center;
@@ -385,10 +388,7 @@ input[type="radio"] {
     }
 }
 @media screen and (max-width: 650px){
-    .provider-logo {
-        width: 150px;
-        height: 50px;
-    }
+   
     #showTransportation,
     #user-comment {
         border: darkcyan solid 1px;
@@ -401,13 +401,15 @@ input[type="radio"] {
         margin: 5px;
         padding: 5px;
     }
-
-   .providerDiv,
-   .user-comment {
-        border: darkcyan dashed 2px;
-        padding: 15px;
-        margin: 15px;
+    .provider-detail{
+        flex-direction: column;
     }
+    .left,
+    .right {
+        width: 100%;
+        padding: 5px;
+}
+   
 }
 @media screen and (max-width: 500px){   
     button {
