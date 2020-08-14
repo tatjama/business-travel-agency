@@ -43,36 +43,36 @@
                         FROM:
                         <br> Country: <input list="countryFrom" name="countryFrom" id="fromCountry" placeholder="Choose Country FROM" autofocus required>
                         <datalist id="countryFrom">       
-                            <option value="Srbija">
-                            <option value="Grcka">
-                            <option value="Rusija">
+                            <option value="Serbia">
+                            <option value="Greece">
+                            <option value="Russia">
                             <option value="USA">
                             </datalist>
                         <br>
                         <br> City :<input list="cityFrom" name="cityFrom" placeholder="City from"><br>
                         <datalist id="cityFrom">
                             <option value="Belgrade">
-                            <option value="Thesaloniki">
+                            <option value="Thessaloniki">
                             <option value="Chicago">
-                            <option value="Moskow">
+                            <option value="Moscow">
                         </datalist>
                     </div>
                     <div id="to">
                         TO:
                         <br> Country:<input list="countryTo" name="countryTo" id="toCountry" placeholder="Choose Country TO" required>
                         <datalist id="countryTo">       
-                                    <option value="Srbija">
-                                    <option value="Grcka">
-                                    <option value="Rusija">
+                                    <option value="Serbia">
+                                    <option value="Greece">
+                                    <option value="Russia">
                                     <option value="USA">
                                     </datalist>
                         <br>
                         <br> City :<input list="cityTo" name="cityTo" placeholder="City to"><br>
                         <datalist id="cityTo">
                                     <option value="Belgrade">
-                                    <option value="Thesaloniki">
+                                    <option value="Thessaloniki">
                                     <option value="Chicago">
-                                    <option value="Moskow">
+                                    <option value="Moscow">
                                 </datalist>
                     </div>
 
@@ -103,7 +103,7 @@
                         <br>
                         <button type="submit" onclick="showTransportation()">
                             <a href="#showTransportation"> Submit</a></button>
-                        <button type="reset" onclick="clearSelection()">Clear</button>
+                        <button type="reset">Clear</button>
                     </div>
                 </div>
             </fieldset>
@@ -242,8 +242,8 @@
                                     <br>
                                     <textarea cols="60" rows="10" name="information" id="informationLife" placeholder="Write some information about life in the city"></textarea>
                                     <br>
-
-                                    <button type="button" onclick="addInformation()">Comment</button>
+                                    <button class="choose-destination-button">Choose destination</button>
+                                    <button type="button"  onclick="addInformation()">Comment</button>
                                     <button type="reset" onclick="clearSelection()">Clear</button>
 
 
@@ -262,7 +262,7 @@
                                             <p>Author: Pera Peric</p>
                                             <p>Date:01.01.2013</p>
                                         </div>
-                                        <div class="textComment">
+                                        <div class="text-comment">
                                             <h2> Exelent company</h2>
                                             <p>Comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus neque et nulla dictum, ac scelerisque quam ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
                                                 cubilia Curae; Nam volutpat viverra dolor, ac efficitur libero commodo ac. Nam venenatis sodales sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis sed libero et purus feugiat
@@ -291,7 +291,7 @@
                                             <p>Author: Dusko Dugousko</p>
                                             <p>Date:02.02.2019</p>
                                         </div>
-                                        <div class="textComment">
+                                        <div class="text-comment">
                                             <h2>Airplane is quite old...</h2>
                                             <p>Comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus neque et nulla dictum, ac scelerisque quam ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
                                                 cubilia Curae; Nam volutpat viverra dolor, ac efficitur libero commodo ac. Nam venenatis sodales sollicitudin. Interdum et malesuada fames ac ante .</p>
@@ -319,7 +319,7 @@
                                             <p>Author: Marko Markovic</p>
                                             <p>Date:03.03.2003</p>
                                         </div>
-                                        <div class="textComment">
+                                        <div class="text-comment">
                                             <h2>Wonderfull trip</h2>
                                             <p>Comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus neque et nulla dictum, ac scelerisque quam ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
                                                 cubilia Curae; Nam volutpat viverra dolor, ac efficitur libero commodo ac. Nam venenatis sodales sollicitudin. Interdum et malesuada fames a</p>
@@ -457,9 +457,6 @@
 
         function showAddComment() {
             document.getElementById('userComment').style.display = "block";
-        }
-        function clearSelection(){
-            alert('Obrisi ;polja')
         }
     </script>
 </body>
