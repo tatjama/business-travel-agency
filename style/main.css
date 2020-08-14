@@ -300,10 +300,6 @@ input[type="radio"] {
     color: darkcyan;
 }
 
-
-
-
-
 /*FORM TRANSPORTATION*/
 
 #nCity {
@@ -315,7 +311,13 @@ input[type="radio"] {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
 }
+#transportationFromTo div {
+    padding: 5px;
+}
+
 
 /*ADD FEEDBACK ABOUT TRANSPORTATION*/
 

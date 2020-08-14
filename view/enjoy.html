@@ -28,7 +28,7 @@
         <a href="javascript:void(0);" class="icon" onclick="nav()">
             <i class="fa fa-bars"></i>
         </a>
-        <a id="signOut" href="index.html" onclick="signOut()">Sign Out</a>
+        <a id="signOut" href="../index.html" onclick="signOut()">Sign Out</a>
     </div> 
 
     <!--MAIN-->
@@ -78,22 +78,24 @@
 
                     <div id="type">
                         Transportation Type
-
-                        <br> <span>Airplane    </span>
+                        <br> 
                         <input type="radio" name="transportationType" id="airplane">
-                        <br>
-                        <span>BUS</span>
+                        <span>Airplane    </span>
+                        <br>                        
                         <input type="radio" name="transportationType" id="bus">
-                        <br> <span>Company car    </span>
+                        <span>BUS</span>
+                        <br> 
                         <input type="radio" name="transportationType" id="companyCar">
-                        <br>
-                        <span>Rent a car</span>
+                        <span>Company car    </span>
+                        <br>                        
                         <input type="radio" name="transportationType" id="rentACar">
-                        <br> <span>Train   </span>
-                        <input type="radio" name="transportationType" id="train">
+                        <span>Rent a car</span>
                         <br>
-                        <span>Taxi</span>
+                        <input type="radio" name="transportationType" id="train">
+                        <span>Train   </span>
+                        <br>                        
                         <input type="radio" name="transportationType" id="taxi">
+                        <span>Taxi</span>
                     </div>
 
                     <div>
@@ -101,7 +103,7 @@
                         <br>
                         <button type="submit" onclick="showTransportation()">
                             <a href="#showTransportation"> Submit</a></button>
-                        <button type="reset" onclick="obrisi()">Clean</button>
+                        <button type="reset" onclick="clearSelection()">Clear</button>
                     </div>
                 </div>
             </fieldset>
@@ -112,12 +114,12 @@
         <div id="showTransportation" style="display: none">
             <h1>City FROM: Belgrade - City TO: Budapest</h1>
             <button><a href="./life.html">Life in...</a> </button>
-            <div class="middleWrapper">
+            <div class="middle-wrapper">
                 <h2> Airplane</h2>
-                <div class="providerDiv">
+                <div class="provider-div">
 
                     <div class="provider">
-                        <img class="providerLogo" src="../images/logoavio1.png">
+                        <img class="provider-logo" src="../images/logoavio1.png">
 
                         <h2>Provider name: AirSerbia
                             <br>Type: Airplane
@@ -132,15 +134,15 @@
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
                             <p>4.1 average based on 254 reviews.</p>
-                            <button onclick="providerDetail()"><a href="#showProviderDetail"> Details</a></button>
+                            <button onclick="showProviderDetail()"><a href="#showProviderDetail"> Details</a></button>
                             <button onclick="showAddComment()"><a href="#userComment">Add Comment</a></button>
                         </div>
 
                     </div>
-                    <div class="showProviderDetail" id="showProviderDetail" style="display: none">
+                    <div class="show-provider-detail" id="showProviderDetail" style="display: none">
                         <hr style="border:3px solid #f1f1f1">
 
-                        <div class="providerDetail">
+                        <div class="provider-detail">
                             <div class="left">
                                 <p>Name: AirSerbia</p>
                                 <p>Country: Serbia</p>
@@ -166,7 +168,7 @@
                         <div class="providerFeedback">
                             <div>
                                 <h2>User rating </h2>
-                                <div>
+                                <div class="range">
                                     <span class="heading">5 star </span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -175,7 +177,7 @@
                                     <span class="fa fa-star checked"></span>
                                     <span> 54 reviews.</span>
                                 </div>
-                                <div>
+                                <div class="range">
                                     <span class="heading">4 star </span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -184,7 +186,7 @@
                                     <span class="fa fa-star "></span>
                                     <span> 104 reviews.</span>
                                 </div>
-                                <div>
+                                <div class="range">
                                     <span class="heading">3 star </span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -193,7 +195,7 @@
                                     <span class="fa fa-star "></span>
                                     <span> 50 reviews.</span>
                                 </div>
-                                <div>
+                                <div class="range">
                                     <span class="heading">2 star </span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -202,7 +204,7 @@
                                     <span class="fa fa-star "></span>
                                     <span> 45 reviews.</span>
                                 </div>
-                                <div>
+                                <div class="range">
                                     <span class="heading">1 star </span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star "></span>
@@ -216,7 +218,8 @@
 
 
                             </div>
-                            <form style="display: none" id="formComment">
+                            <!--Proveriti-->
+                            <form style="display: none; background-color: yellow;" id="formComment">
                                 <fieldset>
                                     <legend>Comment</legend>
                                     Choose category:
@@ -241,11 +244,12 @@
                                     <br>
 
                                     <button type="button" onclick="addInformation()">Comment</button>
-                                    <button type="reset" onclick="obrisi()">Clean</button>
+                                    <button type="reset" onclick="clearSelection()">Clear</button>
 
 
                                 </fieldset>
                             </form>
+                            <!--Kraj provere-->
                             <!--COMMENTS-->
                             <div id="showComments">
                                 <form>
@@ -253,7 +257,7 @@
 
                                     <div class="comment" id="comment1">
                                         <div class="user">
-                                            <img class="userImage" src="../images/traveler.jpeg" alt="user">
+                                            <img class="avatar" src="../images/traveler.jpeg" alt="user">
 
                                             <p>Author: Pera Peric</p>
                                             <p>Date:01.01.2013</p>
@@ -282,7 +286,7 @@
                                     </div>
                                     <div class="comment" id="comment2">
                                         <div class="user">
-                                            <img class="userImage" src="../images/traveler.jpeg" alt="user">
+                                            <img class="avatar" src="../images/traveler.jpeg" alt="user">
 
                                             <p>Author: Dusko Dugousko</p>
                                             <p>Date:02.02.2019</p>
@@ -310,7 +314,7 @@
 
                                     <div class="comment" id="comment3">
                                         <div class="user">
-                                            <img class="userImage" src="../images/traveler.jpeg" alt="user">
+                                            <img class="avatar" src="../images/traveler.jpeg" alt="user">
 
                                             <p>Author: Marko Markovic</p>
                                             <p>Date:03.03.2003</p>
@@ -355,11 +359,11 @@
         <div id="userComment" style="display: none">
             <h1>Add feedback about transportation</h1>
             <p>or Add feedback about hotels, restoraunts, cities...</p>
-            <div class="middleWrapper">
+            <div class="middle-wrapper">
                 <div class="userComment">
                     <form>
                         <div class="provider">
-                            <img class="providerLogo" src="../images/logoavio1.png">
+                            <img class="provider-logo" src="../images/logoavio1.png">
                             <h2>Add feedback about AirSerbia</h2>
                             <div>
                                 <span class="heading">User Rating</span>
@@ -378,8 +382,8 @@
                         <br>
                         <textarea cols="100" rows="10" placeholder="Place for your comment..."></textarea>
                         <br>
-                        <p class="messageRange">Click for range</p>
-                        <div>
+                        <p class="message-range">Click for range</p>
+                        <div class="range">
                             5 star <input type="radio" name="starRange" value="5">
                             <span class="fa fa-star checked" checked></span>
                             <span class="fa fa-star checked"></span>
@@ -389,7 +393,7 @@
 
 
                         </div>
-                        <div>
+                        <div class="range">
                             4 star <input type="radio" name="starRange" value="4">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -397,20 +401,20 @@
                             <span class="fa fa-star checked"></span>
 
                         </div>
-                        <div>
+                        <div class="range">
                             3 star <input type="radio" name="starRange" value="3">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
 
                         </div>
-                        <div>
+                        <div class="range">
                             2 star <input type="radio" name="starRange" value="2">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
 
                         </div>
-                        <div>
+                        <div class="range">
                             1 star <input type="radio" name="starRange" value="1">
                             <span class="fa fa-star checked"></span>
 
@@ -442,9 +446,9 @@
             document.getElementById('showTransportation').style.display = "block";
         }
 
-        function providerDetail() {
+        function showProviderDetail() {
 
-            document.querySelector('.showProviderDetail').style.display = "block";
+            document.querySelector('.show-provider-detail').style.display = "block";
         }
 
         function providerFeedback() {
@@ -453,6 +457,9 @@
 
         function showAddComment() {
             document.getElementById('userComment').style.display = "block";
+        }
+        function clearSelection(){
+            alert('Obrisi ;polja')
         }
     </script>
 </body>
