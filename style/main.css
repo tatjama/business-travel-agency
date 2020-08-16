@@ -337,6 +337,10 @@ input[type="radio"] {
         text-align: center;
         padding: 1% 3%;
     }
+    footer div{
+        color: grey;
+        font-size: 12px;
+    }
 /*RESPONSIVE*/    
 
 @media screen and (max-width: 800px){
