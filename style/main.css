@@ -76,7 +76,7 @@ button:hover {
 /*HEADER*/
 
 #header-home {
-    background-image: url("../images/metropolis.jpg");
+    background-image: url("../images/metropolis.webp");
     background-position: center;   
     height: 100%;
     padding: 50px 0px;
@@ -86,7 +86,7 @@ button:hover {
 
 /*-------ACCOMMODATION-----*/
 #header-accommodation {
-    background-image: url("../images/accomodation.jpg");
+    background-image: url("../images/accomodation.webp");
     background-position-y: 80%;    
 }
    
@@ -97,7 +97,7 @@ button:hover {
 /*HEADER*/
 
 #header-enjoy {
-    background-image: url("../images/enjoy.jpg");
+    background-image: url("../images/enjoy.webp");
     background-position-y: 30%;   
 }
 /***********************************/
@@ -105,20 +105,20 @@ button:hover {
  /*HEADER*/
         
  #header-life {
-    background-image: url("../images/city_lights.jpg");
+    background-image: url("../images/city_lights.webp");
     background-position-y:75%;    
 }
 /*************************************************
 /*--------------PROVIDERS--------------------*/
 #header-providers {
-    background-image: url("../images/providers.jpg ");
+    background-image: url("../images/providers.webp ");
     background-position: center; 
 }
 
 /*********************************/
 /*-------------FEEDBACK-------------*/
 #header-feedback {
-    background-image: url("../images/feedback.jpeg ");
+    background-image: url("../images/feedback.webp ");
     background-position: center;  
     }   
     
